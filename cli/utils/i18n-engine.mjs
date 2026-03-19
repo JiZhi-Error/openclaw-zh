@@ -78,9 +78,12 @@ export async function applyTranslation(translation, targetDir, options = {}) {
   
   let modified = content;
   
-  for (const [original, translated] of Object.entries(translation.replacements)) {
-    // 跳过注释键（如 __comment_page_header）
-    if (original.startsWith('__comment')) continue;
+  const orderedReplacements = Object.entries(translation.replacements)
+    .filter(([original]) => !original.startsWith('__comment'))
+    // 长原文优先，避免短字符串先替换后破坏更长的匹配项
+    .sort((a, b) => b[0].length - a[0].length);
+
+  for (const [original, translated] of orderedReplacements) {
 
     if (modified.includes(translated)) {
       // 已经翻译过了
