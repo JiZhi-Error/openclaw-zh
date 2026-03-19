@@ -1,0 +1,9 @@
+{
+  "file": "extensions/feishu/src/channel.ts",
+  "description": "飞书/Lark 扩展元信息",
+  "replacements": {
+    "label: \"Feishu\"": "label: \"飞书\"",
+    "selectionLabel: \"Feishu/Lark (飞书)\"": "selectionLabel: \"飞书/Lark (Feishu)\"",
+    "blurb: \"飞书/Lark enterprise messaging.\"": "blurb: \"飞书/Lark 企业消息集成。\""
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "file": "src/commands/auth-choice.apply.api-key-providers.ts",
+  "description": "API 提供商认证交互",
+  "replacements": {
+    "promptMessage: \"Enter LiteLLM API key\"": "promptMessage: \"输入 LiteLLM API 密钥\"",
+    "\"LiteLLM provides a unified API to 100+ LLM providers.\\nGet your API key from your LiteLLM proxy or https://litellm.ai\\nDefault proxy runs on http://localhost:4000\"": "\"LiteLLM 提供统一 API，可接入 100+ LLM 提供商。\\n请从你的 LiteLLM 代理或 https://litellm.ai 获取 API 密钥。\\n默认代理运行在 http://localhost:4000\""
+  }
+}

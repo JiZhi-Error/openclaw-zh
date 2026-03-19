@@ -1,0 +1,12 @@
+{
+  "file": "src/wizard/setup.finalize.ts",
+  "description": "初始化完成提示",
+  "replacements": {
+    "'What now: https://openclaw.ai/showcase (\"What People Are Building\").'": "'接下来做什么：查看 https://openclaw.ai/showcase (\"大家都在用 OpenClaw 做什么\")。'",
+    "\"What now\"": "\"接下来\"",
+    "\"Onboarding complete. Dashboard opened; keep that tab to control OpenClaw.\"": "\"初始化完成！已打开控制面板；保持该标签页以控制 OpenClaw。\"",
+    "\"Onboarding complete. Web UI seeded in the background; open it anytime with the dashboard link above.\"": "\"初始化完成！Web UI 已在后台准备就绪；随时可用上面的链接打开。\"",
+    "\"Onboarding complete. Use the dashboard link above to control OpenClaw.\"": "\"初始化完成！使用上面的链接打开控制面板。\"",
+    "\"Web search\"": "\"网页搜索\""
+  }
+}

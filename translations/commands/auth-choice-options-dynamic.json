@@ -1,0 +1,7 @@
+{
+  "file": "src/commands/auth-choice-options.ts",
+  "description": "认证选项动态项和跳过项",
+  "replacements": {
+    "{ value: \"skip\", label: \"Skip for now\" }": "{ value: \"skip\", label: \"暂时跳过\" }"
+  }
+}

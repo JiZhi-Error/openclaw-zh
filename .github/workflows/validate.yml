@@ -1,0 +1,53 @@
+name: Validate Translations
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: "24.x"
+  UPSTREAM_REPO: openclaw/openclaw
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          check-latest: false
+
+      - name: Validate JSON files
+        run: |
+          node --input-type=module - <<'EOF'
+          import fs from "node:fs/promises";
+          import path from "node:path";
+
+          async function walk(dir) {
+            const entries = await fs.readdir(dir, { withFileTypes: true });
+            const files = [];
+            for (const entry of entries) {
+              const full = path.join(dir, entry.name);
+              if (entry.isDirectory()) files.push(...await walk(full));
+              else if (entry.name.endsWith(".json")) files.push(full);
+            }
+            return files;
+          }
+
+          for (const file of await walk("translations")) {
+            JSON.parse(await fs.readFile(file, "utf8"));
+          }
+          EOF
+
+      - name: Clone upstream main
+        run: |
+          git clone --depth=1 https://github.com/${{ env.UPSTREAM_REPO }}.git openclaw
+
+      - name: Validate translation matches
+        run: node scripts/validate-translations.mjs --upstream ./openclaw

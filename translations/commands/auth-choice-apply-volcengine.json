@@ -1,0 +1,10 @@
+{
+  "file": "extensions/volcengine/index.ts",
+  "description": "火山引擎认证流程翻译",
+  "replacements": {
+    "label: \"Volcano Engine API key\"": "label: \"火山引擎 API 密钥\"",
+    "promptMessage: \"Enter Volcano Engine API key\"": "promptMessage: \"请输入火山引擎 API 密钥\"",
+    "groupLabel: \"Volcano Engine\"": "groupLabel: \"火山引擎\"",
+    "groupHint: \"API key\"": "groupHint: \"API 密钥\""
+  }
+}

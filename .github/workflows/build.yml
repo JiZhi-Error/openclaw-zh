@@ -1,0 +1,169 @@
+name: Build OpenClaw ZH
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  NODE_VERSION: "24.x"
+  PNPM_VERSION: "10.23.0"
+  UPSTREAM_REPO: openclaw/openclaw
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          check-latest: false
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Clone upstream main
+        id: upstream
+        run: |
+          git clone --depth=1 https://github.com/${{ env.UPSTREAM_REPO }}.git openclaw
+          echo "ref=main" >> "$GITHUB_OUTPUT"
+          echo "sha=$(git -C openclaw rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
+          echo "version=$(node -p 'require(\"./openclaw/package.json\").version')" >> "$GITHUB_OUTPUT"
+
+      - name: Resolve pnpm store path
+        run: echo "STORE_PATH=$(pnpm store path --silent)" >> "$GITHUB_ENV"
+
+      - name: Cache pnpm store
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('openclaw/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Validate translation rules
+        run: node scripts/validate-translations.mjs --upstream ./openclaw
+
+      - name: Apply translation patch
+        id: apply
+        shell: bash
+        run: |
+          OUTPUT="$(node cli/index.mjs apply --target=./openclaw 2>&1)"
+          echo "$OUTPUT"
+
+          STATS_LINE="$(echo "$OUTPUT" | grep -o '##STATS##[^#]*##' | head -1 || true)"
+          APPLIED="$(echo "$STATS_LINE" | grep -o 'applied=[0-9]*' | cut -d= -f2)"
+          EXISTED="$(echo "$STATS_LINE" | grep -o 'existed=[0-9]*' | cut -d= -f2)"
+          FAILED="$(echo "$STATS_LINE" | grep -o 'failed=[0-9]*' | cut -d= -f2)"
+
+          [[ ! "$APPLIED" =~ ^[0-9]+$ ]] && APPLIED="0"
+          [[ ! "$EXISTED" =~ ^[0-9]+$ ]] && EXISTED="0"
+          [[ ! "$FAILED" =~ ^[0-9]+$ ]] && FAILED="0"
+
+          echo "applied=$APPLIED" >> "$GITHUB_OUTPUT"
+          echo "existed=$EXISTED" >> "$GITHUB_OUTPUT"
+          echo "failed=$FAILED" >> "$GITHUB_OUTPUT"
+
+          if [ "$FAILED" != "0" ]; then
+            echo "Translation apply reported $FAILED unmatched replacements."
+            exit 1
+          fi
+
+      - name: Install upstream dependencies
+        working-directory: openclaw
+        shell: bash
+        run: |
+          pnpm install --frozen-lockfile --ignore-scripts=false --config.engine-strict=false --config.enable-pre-post-scripts=true --config.side-effects-cache=true || \
+          pnpm install --frozen-lockfile --ignore-scripts=false --config.engine-strict=false --config.enable-pre-post-scripts=true --config.side-effects-cache=true
+
+      - name: Build OpenClaw
+        working-directory: openclaw
+        run: pnpm build
+
+      - name: Build Dashboard UI
+        working-directory: openclaw
+        run: pnpm ui:build
+
+      - name: Rename packaged app to openclaw-zh
+        working-directory: openclaw
+        shell: bash
+        run: |
+          node --input-type=module <<'EOF'
+          import fs from "node:fs";
+
+          const pkgPath = "package.json";
+          const pkg = JSON.parse(fs.readFileSync(pkgPath, "utf8"));
+
+          pkg.name = "openclaw-zh";
+          pkg.description = "Simplified Chinese build of OpenClaw";
+          pkg.homepage = "https://github.com/JiZhi-Error/openclaw-zh";
+          pkg.repository = {
+            type: "git",
+            url: "git+https://github.com/JiZhi-Error/openclaw-zh.git",
+          };
+          pkg.bugs = {
+            url: "https://github.com/JiZhi-Error/openclaw-zh/issues",
+          };
+          pkg.bin = {
+            "openclaw-zh": "openclaw-zh.mjs",
+          };
+
+          if (pkg.exports && pkg.exports["./cli-entry"]) {
+            pkg.exports["./cli-entry"] = "./openclaw-zh.mjs";
+          }
+
+          if (Array.isArray(pkg.files)) {
+            const files = new Set(pkg.files);
+            files.add("openclaw-zh.mjs");
+            pkg.files = [...files];
+          }
+
+          fs.writeFileSync(pkgPath, `${JSON.stringify(pkg, null, 2)}\n`, "utf8");
+
+          const bootstrap = fs
+            .readFileSync("openclaw.mjs", "utf8")
+            .replaceAll("openclaw:", "openclaw-zh:");
+          fs.writeFileSync("openclaw-zh.mjs", bootstrap, "utf8");
+          EOF
+
+      - name: Archive build output
+        run: |
+          tar \
+            --exclude='./node_modules' \
+            --exclude='./.git' \
+            -czf "openclaw-zh-build-${{ github.sha }}.tgz" \
+            -C openclaw .
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: openclaw-zh-build-${{ steps.upstream.outputs.version }}-${{ steps.upstream.outputs.sha }}
+          path: openclaw-zh-build-${{ github.sha }}.tgz
+          retention-days: 7
+
+      - name: Build summary
+        run: |
+          {
+            echo "## Build Summary"
+            echo ""
+            echo "| Item | Value |"
+            echo "| --- | --- |"
+            echo "| Upstream version | ${{ steps.upstream.outputs.version }} |"
+            echo "| Upstream ref | ${{ steps.upstream.outputs.ref }} |"
+            echo "| Upstream commit | ${{ steps.upstream.outputs.sha }} |"
+            echo "| Applied replacements | ${{ steps.apply.outputs.applied }} |"
+            echo "| Already present | ${{ steps.apply.outputs.existed }} |"
+            echo "| Unmatched | ${{ steps.apply.outputs.failed }} |"
+          } >> "$GITHUB_STEP_SUMMARY"

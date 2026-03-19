@@ -1,0 +1,9 @@
+{
+  "file": "extensions/xai/index.ts",
+  "description": "xAI (Grok) 认证配置",
+  "replacements": {
+    "label: \"xAI API key\"": "label: \"xAI API 密钥\"",
+    "promptMessage: \"Enter xAI API key\"": "promptMessage: \"输入 xAI API 密钥\"",
+    "groupHint: \"API key\"": "groupHint: \"API 密钥\""
+  }
+}

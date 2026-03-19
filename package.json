@@ -1,0 +1,30 @@
+{
+  "name": "openclaw-zh-patch",
+  "version": "0.1.0",
+  "description": "OpenClaw 简体中文语言包，仅包含官方源码汉化补丁",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "keywords": [
+    "openclaw",
+    "i18n",
+    "l10n",
+    "zh-cn",
+    "translation"
+  ],
+  "bin": {
+    "openclaw-zh": "./cli/index.mjs"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "cli": "node cli/index.mjs",
+    "status": "node cli/index.mjs status",
+    "apply": "node cli/index.mjs apply",
+    "verify": "node cli/index.mjs verify",
+    "restore": "node cli/index.mjs restore",
+    "validate:upstream": "node scripts/validate-translations.mjs --upstream ./openclaw",
+    "detect:upstream": "node scripts/detect-untranslated.mjs --upstream ./openclaw"
+  }
+}
