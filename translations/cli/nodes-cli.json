@@ -1,0 +1,13 @@
+{
+  "file": "src/cli/nodes-cli/register.ts",
+  "description": "nodes 主命令帮助",
+  "replacements": {
+    "Manage gateway-owned nodes (pairing, status, invoke, and media)": "管理由 gateway 持有的节点（配对、状态、调用与媒体）",
+    "Examples:": "示例：",
+    "List known nodes with live status.": "列出已知节点及实时状态。",
+    "Show pending node pairing requests.": "显示待处理的节点配对请求。",
+    "Run a shell command on a node.": "在节点上运行 shell 命令。",
+    "Capture a photo from a node camera.": "从节点摄像头拍摄照片。",
+    "Docs:": "文档："
+  }
+}

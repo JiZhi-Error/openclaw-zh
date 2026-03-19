@@ -1,0 +1,13 @@
+{
+  "file": "src/cli/nodes-cli/register.status.ts",
+  "description": "nodes status/list/describe 子命令帮助",
+  "replacements": {
+    "List known nodes with connection status and capabilities": "列出已知节点及其连接状态与能力",
+    "Only show connected nodes": "仅显示已连接节点",
+    "Only show nodes connected within duration (e.g. 24h)": "仅显示在指定时长内连接过的节点（例如 24h）",
+    "Describe a node (capabilities + supported invoke commands)": "描述节点（能力 + 支持的调用命令）",
+    "Node id, name, or IP": "节点 ID、名称或 IP",
+    "List pending and paired nodes": "列出待配对和已配对节点",
+    "Invalid --last-connected": "无效的 --last-connected"
+  }
+}

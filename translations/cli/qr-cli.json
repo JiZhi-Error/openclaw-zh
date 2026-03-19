@@ -1,0 +1,25 @@
+{
+  "file": "src/cli/qr-cli.ts",
+  "description": "qr 命令帮助与输出",
+  "replacements": {
+    "Generate an iOS pairing QR code and setup code": "生成 iOS 配对二维码和设置码",
+    "Docs:": "文档：",
+    "Use gateway.remote.url and gateway.remote token/password (ignores device-pair publicUrl)": "使用 gateway.remote.url 与 gateway.remote token/password（忽略 device-pair publicUrl）",
+    "Override gateway URL used in the setup payload": "覆盖设置 payload 使用的网关 URL",
+    "Override gateway public URL used in the setup payload": "覆盖设置 payload 使用的网关公网 URL",
+    "Override gateway token for setup payload": "覆盖设置 payload 使用的网关令牌",
+    "Override gateway password for setup payload": "覆盖设置 payload 使用的网关密码",
+    "Print only the setup code": "仅输出设置码",
+    "Skip ASCII QR rendering": "跳过 ASCII 二维码渲染",
+    "Output JSON": "输出 JSON",
+    "Use either --token or --password, not both.": "--token 和 --password 只能二选一。",
+    "qr --remote requires gateway.remote.url (or gateway.tailscale.mode=serve/funnel).": "qr --remote 需要 gateway.remote.url（或 gateway.tailscale.mode=serve/funnel）。",
+    "Pairing QR": "配对二维码",
+    "Scan this with the OpenClaw iOS app (Onboarding -> Scan QR).": "请使用 OpenClaw iOS 应用扫描（Onboarding -> Scan QR）。",
+    "Setup code:": "设置码：",
+    "Gateway:": "网关：",
+    "Auth:": "认证：",
+    "Source:": "来源：",
+    "Approve after scan with:": "扫描后可使用以下命令批准："
+  }
+}

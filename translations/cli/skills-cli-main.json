@@ -1,0 +1,15 @@
+{
+  "file": "src/cli/skills-cli.ts",
+  "description": "skills 命令帮助",
+  "replacements": {
+    "List and inspect available skills": "列出并查看可用技能",
+    "Docs:": "文档：",
+    "List all available skills": "列出所有可用技能",
+    "Output as JSON": "输出为 JSON",
+    "Show only eligible (ready to use) skills": "仅显示可用（可直接使用）的技能",
+    "Show more details including missing requirements": "显示更多细节，包括缺失的依赖条件",
+    "Show detailed information about a skill": "显示某个技能的详细信息",
+    "Skill name": "技能名称",
+    "Check which skills are ready vs missing requirements": "检查哪些技能已就绪、哪些仍缺少条件"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "file": "src/cli/browser-cli-actions-observe.ts",
+  "description": "browser observe 子命令帮助",
+  "replacements": {
+    "Get recent console messages": "获取最近的控制台消息",
+    "Filter by level (error, warn, info)": "按级别过滤（error、warn、info）",
+    "CDP target id (or unique prefix)": "CDP target ID（或唯一前缀）",
+    "Save page as PDF": "将页面保存为 PDF",
+    "Wait for a network response and return its body": "等待网络响应并返回其内容体",
+    "URL (exact, substring, or glob like **/api)": "URL（精确、子串，或如 **/api 的 glob）",
+    "How long to wait for the response (default: 20000)": "等待响应的时间（默认：20000）",
+    "Max body chars to return (default: 200000)": "返回内容体的最大字符数（默认：200000）"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "file": "src/cli/program/message/register.emoji-sticker.ts",
+  "description": "message emoji/sticker 子命令帮助",
+  "replacements": {
+    "Emoji actions": "表情操作",
+    "List emojis": "列出表情",
+    "Guild id (Discord)": "Guild ID（Discord）",
+    "Upload an emoji": "上传表情",
+    "Guild id": "Guild ID",
+    "Emoji name": "表情名称",
+    "Emoji media (path or URL)": "表情媒体（路径或 URL）",
+    "Role id (repeat)": "角色 ID（可重复）",
+    "Sticker actions": "贴纸操作",
+    "Send stickers": "发送贴纸",
+    "Sticker id (repeat)": "贴纸 ID（可重复）",
+    "Optional message body": "可选消息正文",
+    "Upload a sticker": "上传贴纸",
+    "Sticker name": "贴纸名称",
+    "Sticker description": "贴纸描述",
+    "Sticker tags": "贴纸标签",
+    "Sticker media (path or URL)": "贴纸媒体（路径或 URL）"
+  }
+}

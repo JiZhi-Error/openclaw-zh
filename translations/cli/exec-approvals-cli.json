@@ -1,0 +1,33 @@
+{
+  "file": "src/cli/exec-approvals-cli.ts",
+  "description": "approvals 命令帮助与输出",
+  "replacements": {
+    "Manage exec approvals (gateway or node host)": "管理执行审批（gateway 或 node host）",
+    "Docs:": "文档：",
+    "Fetch exec approvals snapshot": "获取执行审批快照",
+    "Target node id/name/IP": "目标节点 ID/名称/IP",
+    "Force gateway approvals": "强制使用 gateway 审批",
+    "Replace exec approvals with a JSON file": "使用 JSON 文件替换执行审批",
+    "Path to JSON file to upload": "要上传的 JSON 文件路径",
+    "Read JSON from stdin": "从 stdin 读取 JSON",
+    "Edit the per-agent allowlist": "编辑按 agent 划分的 allowlist",
+    "Examples:": "示例：",
+    "Allowlist a local binary pattern for the main agent.": "为主 agent 加入本地二进制模式到 allowlist。",
+    "Allowlist on a specific node/agent.": "在指定 node/agent 上加入 allowlist。",
+    "Allowlist for all agents (wildcard).": "为所有 agent 加入 allowlist（通配符）。",
+    "Remove an allowlist pattern.": "移除一条 allowlist 模式。",
+    "Add a glob pattern to an allowlist": "向 allowlist 添加 glob 模式",
+    "Agent id (defaults to \"*\")": "Agent ID（默认：\"*\"）",
+    "Remove a glob pattern from an allowlist": "从 allowlist 移除 glob 模式",
+    "Writing local approvals.": "正在写入本地审批。",
+    "Exec approvals hash missing; reload and retry.": "执行审批哈希缺失；请重新加载后再试。",
+    "Provide --file or --stdin.": "请提供 --file 或 --stdin。",
+    "Use either --file or --stdin (not both).": "--file 和 --stdin 只能二选一。",
+    "Failed to parse approvals JSON: ${String(err)}": "解析审批 JSON 失败：${String(err)}",
+    "Already allowlisted.": "已在 allowlist 中。",
+    "Pattern not found.": "未找到该模式。",
+    "Approvals": "审批",
+    "No allowlist entries.": "没有 allowlist 条目。",
+    "Allowlist": "Allowlist"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "file": "src/cli/program/message/register.send.ts",
+  "description": "message send 子命令帮助",
+  "replacements": {
+    "Send a message": "发送消息",
+    "Message body (required unless --media is set)": "消息正文（除非设置了 --media，否则必填）",
+    "Attach media (image/audio/video/document). Accepts local paths or URLs.": "附加媒体（图片/音频/视频/文档）。支持本地路径或 URL。",
+    "Shared interactive payload as JSON (buttons/selects rendered natively by supported channels)": "共享交互 payload（JSON，支持的渠道会原生渲染按钮/选择器）",
+    "Telegram inline keyboard buttons as JSON (array of button rows)": "Telegram 内联键盘按钮（JSON，按钮行数组）",
+    "Discord components payload as JSON": "Discord components payload（JSON）",
+    "Adaptive Card JSON object (when supported by the channel)": "Adaptive Card JSON 对象（当渠道支持时）",
+    "Reply-to message id": "回复目标消息 ID",
+    "Thread id (Telegram forum thread)": "线程 ID（Telegram forum thread）",
+    "Treat video media as GIF playback (WhatsApp only).": "将视频媒体按 GIF 播放处理（仅限 WhatsApp）。",
+    "Send media as document to avoid Telegram compression (Telegram only). Applies to images and GIFs.": "将媒体作为文档发送以避免 Telegram 压缩（仅限 Telegram）。适用于图片和 GIF。",
+    "Send message silently without notification (Telegram + Discord)": "静默发送消息而不通知（Telegram + Discord）"
+  }
+}

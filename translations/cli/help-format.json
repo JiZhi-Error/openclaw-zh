@@ -1,0 +1,5 @@
+{
+  "file": "src/cli/help-format.ts",
+  "description": "CLI 帮助格式化辅助（无直接可翻译字符串）",
+  "replacements": {}
+}

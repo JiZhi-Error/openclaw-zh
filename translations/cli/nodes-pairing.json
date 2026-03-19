@@ -1,0 +1,13 @@
+{
+  "file": "src/cli/nodes-cli/register.pairing.ts",
+  "description": "nodes pairing 子命令帮助",
+  "replacements": {
+    "List pending pairing requests": "列出待处理的配对请求",
+    "Approve a pending pairing request": "批准待处理的配对请求",
+    "Pending request id": "待处理请求 ID",
+    "Reject a pending pairing request": "拒绝待处理的配对请求",
+    "Rename a paired node (display name override)": "重命名已配对节点（覆盖显示名称）",
+    "Node id, name, or IP": "节点 ID、名称或 IP",
+    "New display name": "新的显示名称"
+  }
+}

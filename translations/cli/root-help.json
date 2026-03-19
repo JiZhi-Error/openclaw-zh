@@ -1,0 +1,5 @@
+{
+  "file": "src/cli/program/root-help.ts",
+  "description": "根帮助生成器（依赖已翻译描述符，无直接可翻译字符串）",
+  "replacements": {}
+}

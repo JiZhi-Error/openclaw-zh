@@ -1,0 +1,32 @@
+{
+  "file": "src/cli/security-cli.ts",
+  "description": "security 命令帮助与输出",
+  "replacements": {
+    "Audit local config and state for common security foot-guns": "审计本地配置和状态中的常见安全隐患",
+    "Examples:": "示例：",
+    "Run a local security audit.": "运行本地安全审计。",
+    "Include best-effort live Gateway probe checks.": "包含尽力而为的实时网关探测检查。",
+    "Use explicit token for deep probe.": "为深度探测使用显式令牌。",
+    "Use explicit password for deep probe.": "为深度探测使用显式密码。",
+    "Apply safe remediations and file-permission fixes.": "应用安全修复和文件权限修复。",
+    "Output machine-readable JSON.": "输出机器可读 JSON。",
+    "Docs:": "文档：",
+    "Audit config + local state for common security foot-guns": "审计配置和本地状态中的常见安全隐患",
+    "Attempt live Gateway probe (best-effort)": "尝试实时网关探测（尽力而为）",
+    "Use explicit gateway token for deep probe auth": "为深度探测认证使用显式网关令牌",
+    "Use explicit gateway password for deep probe auth": "为深度探测认证使用显式网关密码",
+    "Apply safe fixes (tighten defaults + chmod state/config)": "应用安全修复（收紧默认值 + chmod 状态/配置）",
+    "Print JSON": "输出 JSON",
+    "OpenClaw security audit": "OpenClaw 安全审计",
+    "Summary: ${formatSummary(report.summary)}": "摘要：${formatSummary(report.summary)}",
+    "Run deeper: ${formatCliCommand(\"openclaw security audit --deep\")}": "更深入检查：${formatCliCommand(\"openclaw security audit --deep\")}",
+    "Fix: ${formatCliCommand(\"openclaw security audit --fix\")}": "修复：${formatCliCommand(\"openclaw security audit --fix\")}",
+    "Fixes: failed to apply (unexpected error)": "修复：应用失败（意外错误）",
+    "Fixes: no changes applied": "修复：未应用任何更改",
+    "FIX": "修复",
+    "CRITICAL": "严重",
+    "WARN": "警告",
+    "INFO": "信息",
+    "Fix: ${f.remediation.trim()}": "修复：${f.remediation.trim()}"
+  }
+}

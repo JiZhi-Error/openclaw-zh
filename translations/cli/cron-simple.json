@@ -1,0 +1,15 @@
+{
+  "file": "src/cli/cron-cli/register.cron-simple.ts",
+  "description": "cron 简单子命令帮助",
+  "replacements": {
+    "Remove a cron job": "移除 cron 任务",
+    "Job id": "任务 ID",
+    "Output JSON": "输出 JSON",
+    "Enable a cron job": "启用 cron 任务",
+    "Disable a cron job": "禁用 cron 任务",
+    "Show cron run history (JSONL-backed)": "显示 cron 运行历史（基于 JSONL）",
+    "Max entries (default 50)": "最大条目数（默认 50）",
+    "Run a cron job now (debug)": "立即运行 cron 任务（调试）",
+    "Run only when due (default behavior in older versions)": "仅在到期时运行（旧版本默认行为）"
+  }
+}

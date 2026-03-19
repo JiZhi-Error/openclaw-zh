@@ -1,0 +1,13 @@
+{
+  "file": "src/cli/program/message/helpers.ts",
+  "description": "message 子命令公共选项帮助",
+  "replacements": {
+    "cli message action complete": "CLI message 操作完成",
+    "gateway_stop hook failed: ${String(err)}": "gateway_stop hook 执行失败：${String(err)}",
+    "Channel: ${messageChannelOptions}": "渠道：${messageChannelOptions}",
+    "Channel account id (accountId)": "渠道账号 ID（accountId）",
+    "Output result as JSON": "以 JSON 输出结果",
+    "Print payload and skip sending": "输出 payload 并跳过发送",
+    "Verbose logging": "详细日志"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "file": "src/cli/daemon-cli/register-service-commands.ts",
+  "description": "Gateway 服务子命令帮助",
+  "replacements": {
+    "Show gateway service status + probe the Gateway": "显示 Gateway 服务状态并探测 Gateway",
+    "Gateway WebSocket URL (defaults to config/remote/local)": "Gateway WebSocket URL（默认取自 config/remote/local）",
+    "Gateway token (if required)": "网关令牌（如需要）",
+    "Gateway password (password auth)": "网关密码（password 认证）",
+    "Timeout in ms": "超时时间（毫秒）",
+    "Skip RPC probe": "跳过 RPC 探测",
+    "Exit non-zero when the RPC probe fails": "当 RPC 探测失败时以非零码退出",
+    "Scan system-level services": "扫描系统级服务",
+    "Output JSON": "输出 JSON",
+    "Install the Gateway service (launchd/systemd/schtasks)": "安装 Gateway 服务（launchd/systemd/schtasks）",
+    "Gateway port": "网关端口",
+    "Daemon runtime (node|bun). Default: node": "守护进程运行时（node|bun）。默认：node",
+    "Gateway token (token auth)": "网关令牌（token 认证）",
+    "Reinstall/overwrite if already installed": "如果已安装则重新安装/覆盖",
+    "Uninstall the Gateway service (launchd/systemd/schtasks)": "卸载 Gateway 服务（launchd/systemd/schtasks）",
+    "Start the Gateway service (launchd/systemd/schtasks)": "启动 Gateway 服务（launchd/systemd/schtasks）",
+    "Stop the Gateway service (launchd/systemd/schtasks)": "停止 Gateway 服务（launchd/systemd/schtasks）",
+    "Restart the Gateway service (launchd/systemd/schtasks)": "重启 Gateway 服务（launchd/systemd/schtasks）"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "file": "src/cli/browser-cli-inspect.ts",
+  "description": "browser inspect 子命令帮助",
+  "replacements": {
+    "Capture a screenshot (MEDIA:<path>)": "截取屏幕截图（MEDIA:<path>）",
+    "CDP target id (or unique prefix)": "CDP target ID（或唯一前缀）",
+    "Capture full scrollable page": "截取完整可滚动页面",
+    "ARIA ref from ai snapshot": "ai snapshot 中的 ARIA ref",
+    "CSS selector for element screenshot": "元素截图用的 CSS 选择器",
+    "Output type (default: png)": "输出类型（默认：png）",
+    "Capture a snapshot (default: ai; aria is the accessibility tree)": "截取快照（默认：ai；aria 为无障碍树）",
+    "Snapshot format (default: ai)": "快照格式（默认：ai）",
+    "Max nodes (default: 500/800)": "最大节点数（默认：500/800）",
+    "Snapshot preset (efficient)": "快照预设（efficient）",
+    "Use the efficient snapshot preset": "使用 efficient 快照预设",
+    "Role snapshot: interactive elements only": "角色快照：仅交互元素",
+    "Role snapshot: compact output": "角色快照：紧凑输出",
+    "Role snapshot: max depth": "角色快照：最大深度",
+    "Role snapshot: scope to CSS selector": "角色快照：限定到 CSS 选择器",
+    "Role snapshot: scope to an iframe selector": "角色快照：限定到 iframe 选择器",
+    "Include viewport label overlay screenshot": "包含 viewport 标签覆盖截图",
+    "Write snapshot to a file": "将快照写入文件"
+  }
+}

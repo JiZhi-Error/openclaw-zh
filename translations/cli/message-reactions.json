@@ -1,0 +1,16 @@
+{
+  "file": "src/cli/program/message/register.reactions.ts",
+  "description": "message reactions 子命令帮助",
+  "replacements": {
+    "Add or remove a reaction": "添加或移除一个反应",
+    "Message id": "消息 ID",
+    "Emoji for reactions": "用于反应的表情",
+    "Remove reaction": "移除反应",
+    "WhatsApp reaction participant": "WhatsApp 反应参与者",
+    "WhatsApp reaction fromMe": "WhatsApp 反应 fromMe",
+    "Signal reaction target author (uuid or phone)": "Signal 反应目标作者（uuid 或手机号）",
+    "Signal reaction target author uuid": "Signal 反应目标作者 uuid",
+    "List reactions on a message": "列出消息上的反应",
+    "Result limit": "结果数量上限"
+  }
+}

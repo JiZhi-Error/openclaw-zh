@@ -1,0 +1,25 @@
+{
+  "file": "src/cli/browser-cli-actions-input/register.files-downloads.ts",
+  "description": "browser 文件/下载子命令帮助",
+  "replacements": {
+    "Arm file upload for the next file chooser": "为下一个文件选择器预置文件上传",
+    "File paths to upload (must be within OpenClaw temp uploads dir, e.g. /tmp/openclaw/uploads/file.pdf)": "要上传的文件路径（必须位于 OpenClaw 临时上传目录内，例如 /tmp/openclaw/uploads/file.pdf）",
+    "Ref id from snapshot to click after arming": "预置后要点击的 snapshot ref ID",
+    "Ref id for <input type=file> to set directly": "用于直接设置的 <input type=file> ref ID",
+    "CSS selector for <input type=file>": "<input type=file> 的 CSS 选择器",
+    "CDP target id (or unique prefix)": "CDP target ID（或唯一前缀）",
+    "How long to wait for the next file chooser (default: 120000)": "等待下一个文件选择器的时间（默认：120000）",
+    "Wait for the next download (and save it)": "等待下一次下载（并保存）",
+    "Save path within openclaw temp downloads dir (default: /tmp/openclaw/downloads/...; fallback: os.tmpdir()/openclaw/downloads/...)": "openclaw 临时下载目录内的保存路径（默认：/tmp/openclaw/downloads/...；回退为 os.tmpdir()/openclaw/downloads/...）",
+    "How long to wait for the next download (default: 120000)": "等待下一次下载的时间（默认：120000）",
+    "Click a ref and save the resulting download": "点击 ref 并保存产生的下载文件",
+    "Ref id from snapshot to click": "要点击的 snapshot ref ID",
+    "Save path within openclaw temp downloads dir (e.g. report.pdf or /tmp/openclaw/downloads/report.pdf)": "openclaw 临时下载目录内的保存路径（例如 report.pdf 或 /tmp/openclaw/downloads/report.pdf）",
+    "How long to wait for the download to start (default: 120000)": "等待下载开始的时间（默认：120000）",
+    "Arm the next modal dialog (alert/confirm/prompt)": "为下一个模态对话框（alert/confirm/prompt）预置处理方式",
+    "Accept the dialog": "接受对话框",
+    "Dismiss the dialog": "关闭对话框",
+    "Prompt response text": "Prompt 响应文本",
+    "How long to wait for the next dialog (default: 120000)": "等待下一个对话框的时间（默认：120000）"
+  }
+}

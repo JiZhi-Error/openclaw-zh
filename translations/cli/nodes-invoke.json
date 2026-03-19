@@ -1,0 +1,23 @@
+{
+  "file": "src/cli/nodes-cli/register.invoke.ts",
+  "description": "nodes invoke/run 子命令帮助",
+  "replacements": {
+    "Invoke a command on a paired node": "在已配对节点上调用命令",
+    "Node id, name, or IP": "节点 ID、名称或 IP",
+    "Command (e.g. canvas.eval)": "命令（例如 canvas.eval）",
+    "JSON object string for params": "params 的 JSON 对象字符串",
+    "Node invoke timeout in ms (default 15000)": "节点调用超时（毫秒，默认 15000）",
+    "Idempotency key (optional)": "幂等键（可选）",
+    "Run a shell command on a node (mac only)": "在节点上运行 shell 命令（仅 mac）",
+    "Working directory": "工作目录",
+    "Environment override (repeatable)": "环境变量覆盖（可重复）",
+    "Run a raw shell command string (sh -lc / cmd.exe /c)": "运行原始 shell 命令字符串（sh -lc / cmd.exe /c）",
+    "Agent id (default: configured default agent)": "Agent ID（默认：已配置的默认 agent）",
+    "Exec ask mode (off|on-miss|always)": "执行 ask 模式（off|on-miss|always）",
+    "Exec security mode (deny|allowlist|full)": "执行安全模式（deny|allowlist|full）",
+    "Command timeout (ms)": "命令超时（毫秒）",
+    "Require screen recording permission": "要求屏幕录制权限",
+    "Node invoke timeout in ms (default 30000)": "节点调用超时（毫秒，默认 30000）",
+    "Command and args": "命令及参数"
+  }
+}

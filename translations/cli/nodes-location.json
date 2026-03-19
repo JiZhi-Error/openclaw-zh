@@ -1,0 +1,13 @@
+{
+  "file": "src/cli/nodes-cli/register.location.ts",
+  "description": "nodes location 子命令帮助",
+  "replacements": {
+    "Fetch location from a paired node": "从已配对节点获取位置信息",
+    "Fetch the current location from a node": "获取节点的当前位置",
+    "Node id, name, or IP": "节点 ID、名称或 IP",
+    "Use cached location newer than this (ms)": "使用比此时间更新的缓存位置（毫秒）",
+    "Desired accuracy (default: balanced/precise depending on node setting)": "期望精度（默认：根据节点设置为 balanced/precise）",
+    "Location fix timeout (ms)": "定位超时（毫秒）",
+    "Node invoke timeout in ms (default 20000)": "节点调用超时（毫秒，默认 20000）"
+  }
+}

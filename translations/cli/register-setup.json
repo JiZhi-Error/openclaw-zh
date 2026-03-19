@@ -1,0 +1,14 @@
+{
+  "file": "src/cli/program/register.setup.ts",
+  "description": "setup 命令帮助",
+  "replacements": {
+    "Initialize ~/.openclaw/openclaw.json and the agent workspace": "初始化 ~/.openclaw/openclaw.json 与 agent 工作区",
+    "Docs:": "文档：",
+    "Agent workspace directory (default: ~/.openclaw/workspace; stored as agents.defaults.workspace)": "Agent 工作区目录（默认：~/.openclaw/workspace；保存到 agents.defaults.workspace）",
+    "Run interactive onboarding": "运行交互式引导配置",
+    "Run onboarding without prompts": "无提示运行引导配置",
+    "Onboard mode: local|remote": "引导模式：local|remote",
+    "Remote Gateway WebSocket URL": "远程网关 WebSocket URL",
+    "Remote Gateway token (optional)": "远程网关令牌（可选）"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "file": "src/cli/webhooks-cli.ts",
+  "description": "webhooks 命令帮助",
+  "replacements": {
+    "Webhook helpers and integrations": "Webhook 辅助工具与集成",
+    "Docs:": "文档：",
+    "Gmail Pub/Sub hooks (via gogcli)": "Gmail Pub/Sub hooks（通过 gogcli）",
+    "Configure Gmail watch + Pub/Sub + OpenClaw hooks": "配置 Gmail watch + Pub/Sub + OpenClaw hooks",
+    "Gmail account to watch": "要监听的 Gmail 账号",
+    "GCP project id (OAuth client owner)": "GCP project ID（OAuth client 所属方）",
+    "Pub/Sub topic name": "Pub/Sub topic 名称",
+    "Pub/Sub subscription name": "Pub/Sub subscription 名称",
+    "Gmail label to watch": "要监听的 Gmail 标签",
+    "OpenClaw hook URL": "OpenClaw hook URL",
+    "OpenClaw hook token": "OpenClaw hook 令牌",
+    "Push token for gog watch serve": "gog watch serve 的 push token",
+    "gog watch serve bind host": "gog watch serve 绑定主机",
+    "gog watch serve port": "gog watch serve 端口",
+    "gog watch serve path": "gog watch serve 路径",
+    "Include email body snippets": "包含邮件正文摘要",
+    "Max bytes for body snippets": "正文摘要的最大字节数",
+    "Renew watch every N minutes": "每 N 分钟续期 watch",
+    "Expose push endpoint via tailscale (funnel|serve|off)": "通过 tailscale 暴露 push endpoint（funnel|serve|off）",
+    "Path for tailscale serve/funnel": "tailscale serve/funnel 的路径",
+    "Tailscale serve/funnel target (port, host:port, or URL)": "Tailscale serve/funnel 目标（端口、host:port 或 URL）",
+    "Explicit Pub/Sub push endpoint": "显式指定 Pub/Sub push endpoint",
+    "Output JSON summary": "输出 JSON 摘要",
+    "Run gog watch serve + auto-renew loop": "运行 gog watch serve + 自动续期循环",
+    "Pub/Sub topic path (projects/.../topics/..)": "Pub/Sub topic 路径（projects/.../topics/..）"
+  }
+}

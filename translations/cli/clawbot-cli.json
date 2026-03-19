@@ -1,0 +1,8 @@
+{
+  "file": "src/cli/clawbot-cli.ts",
+  "description": "clawbot 别名命令帮助",
+  "replacements": {
+    "Legacy clawbot command aliases": "旧版 clawbot 命令别名",
+    "Docs:": "文档："
+  }
+}

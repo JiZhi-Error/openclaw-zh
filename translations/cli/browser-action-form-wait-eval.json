@@ -1,0 +1,23 @@
+{
+  "file": "src/cli/browser-cli-actions-input/register.form-wait-eval.ts",
+  "description": "browser form/wait/evaluate 子命令帮助",
+  "replacements": {
+    "Fill a form with JSON field descriptors": "使用 JSON 字段描述填充表单",
+    "JSON array of field objects": "字段对象的 JSON 数组",
+    "Read JSON array from a file": "从文件读取 JSON 数组",
+    "CDP target id (or unique prefix)": "CDP target ID（或唯一前缀）",
+    "Wait for time, selector, URL, load state, or JS conditions": "等待时间、选择器、URL、加载状态或 JS 条件满足",
+    "CSS selector to wait for (visible)": "要等待的 CSS 选择器（可见）",
+    "Wait for N milliseconds": "等待 N 毫秒",
+    "Wait for text to appear": "等待文本出现",
+    "Wait for text to disappear": "等待文本消失",
+    "Wait for URL (supports globs like **/dash)": "等待 URL（支持如 **/dash 的 glob）",
+    "Wait for load state": "等待加载状态",
+    "Wait for JS condition (passed to waitForFunction)": "等待 JS 条件（传给 waitForFunction）",
+    "How long to wait for each condition (default: 20000)": "等待每个条件的时间（默认：20000）",
+    "Evaluate a function against the page or a ref": "对页面或 ref 执行函数",
+    "Function source, e.g. (el) => el.textContent": "函数字符串，例如 (el) => el.textContent",
+    "Ref from snapshot": "来自 snapshot 的 ref",
+    "Missing --fn": "缺少 --fn"
+  }
+}

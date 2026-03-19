@@ -1,0 +1,9 @@
+{
+  "file": "src/cli/daemon-cli/register.ts",
+  "description": "daemon 主命令帮助",
+  "replacements": {
+    "Manage the Gateway service (launchd/systemd/schtasks)": "管理 Gateway 服务（launchd/systemd/schtasks）",
+    "Docs:": "文档：",
+    "Show service install status + probe the Gateway": "显示服务安装状态并探测 Gateway"
+  }
+}

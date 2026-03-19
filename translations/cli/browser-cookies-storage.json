@@ -1,0 +1,21 @@
+{
+  "file": "src/cli/browser-cli-state.cookies-storage.ts",
+  "description": "browser cookies/storage 子命令帮助",
+  "replacements": {
+    "Read/write cookies": "读取/写入 cookies",
+    "CDP target id (or unique prefix)": "CDP target ID（或唯一前缀）",
+    "Set a cookie (requires --url or domain+path)": "设置 cookie（需要 --url 或 domain+path）",
+    "Cookie name": "Cookie 名称",
+    "Cookie value": "Cookie 值",
+    "Cookie URL scope (recommended)": "Cookie URL 作用域（推荐）",
+    "Clear all cookies": "清除所有 cookies",
+    "Read/write localStorage/sessionStorage": "读取/写入 localStorage/sessionStorage",
+    "${kind}Storage commands": "${kind}Storage 命令",
+    "Get ${kind}Storage (all keys or one key)": "获取 ${kind}Storage（全部 key 或单个 key）",
+    "Key (optional)": "Key（可选）",
+    "Set a ${kind}Storage key": "设置 ${kind}Storage key",
+    "Key": "Key",
+    "Value": "值",
+    "Clear all ${kind}Storage keys": "清除所有 ${kind}Storage key"
+  }
+}

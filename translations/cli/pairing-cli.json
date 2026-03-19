@@ -1,0 +1,23 @@
+{
+  "file": "src/cli/pairing-cli.ts",
+  "description": "pairing 命令帮助与输出",
+  "replacements": {
+    "Secure DM pairing (approve inbound requests)": "安全私信配对（批准传入请求）",
+    "Docs:": "文档：",
+    "List pending pairing requests": "列出待处理的配对请求",
+    "Account id (for multi-account channels)": "账号 ID（用于多账号渠道）",
+    "Print JSON": "输出 JSON",
+    "Channel required. Use --channel <channel> or pass it as the first argument (expected one of: ${channels.join(\", \")})": "必须提供渠道。请使用 --channel <channel>，或将其作为第一个参数传入（期望值之一：${channels.join(\", \")}）",
+    "No pending ${channel} pairing requests.": "没有待处理的 ${channel} 配对请求。",
+    "Pairing requests": "配对请求",
+    "Approve a pairing code and allow that sender": "批准配对码并允许该发送方",
+    "Pairing code (or channel when using 2 args)": "配对码（或在使用 2 个参数时填写渠道）",
+    "Pairing code (when channel is passed as the 1st arg)": "配对码（当渠道作为第一个参数传入时）",
+    "Notify the requester on the same channel": "在同一渠道通知请求方",
+    "Usage: ${formatCliCommand(\"openclaw pairing approve <channel> <code>\")} (or: ${formatCliCommand(\"openclaw pairing approve --channel <channel> <code>\")})": "用法：${formatCliCommand(\"openclaw pairing approve <channel> <code>\")}（或：${formatCliCommand(\"openclaw pairing approve --channel <channel> <code>\")})",
+    "Too many arguments. Use: ${formatCliCommand(\"openclaw pairing approve --channel <channel> <code>\")}": "参数过多。请使用：${formatCliCommand(\"openclaw pairing approve --channel <channel> <code>\")}",
+    "No pending pairing request found for code: ${String(resolvedCode)}": "未找到与该配对码对应的待处理请求：${String(resolvedCode)}",
+    "Approved": "已批准",
+    "Failed to notify requester: ${String(err)}": "通知请求方失败：${String(err)}"
+  }
+}

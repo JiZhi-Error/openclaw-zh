@@ -1,0 +1,15 @@
+{
+  "file": "src/cli/nodes-cli/register.screen.ts",
+  "description": "nodes screen 子命令帮助",
+  "replacements": {
+    "Capture screen recordings from a paired node": "从已配对节点捕获屏幕录制",
+    "Capture a short screen recording from a node (prints MEDIA:<path>)": "从节点录制短屏幕视频（输出 MEDIA:<path>）",
+    "Node id, name, or IP": "节点 ID、名称或 IP",
+    "Screen index (0 = primary)": "屏幕索引（0 = 主屏）",
+    "Clip duration (ms or 10s)": "片段时长（毫秒或 10s）",
+    "Frames per second": "每秒帧数",
+    "Disable microphone audio capture": "禁用麦克风音频采集",
+    "Output path": "输出路径",
+    "Node invoke timeout in ms (default 120000)": "节点调用超时（毫秒，默认 120000）"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "file": "src/cli/browser-cli-actions-input/register.navigation.ts",
+  "description": "browser navigation/resize 子命令帮助",
+  "replacements": {
+    "Navigate the current tab to a URL": "将当前标签页导航到某个 URL",
+    "URL to navigate to": "要导航到的 URL",
+    "CDP target id (or unique prefix)": "CDP target ID（或唯一前缀）",
+    "Resize the viewport": "调整 viewport 尺寸",
+    "Viewport width": "Viewport 宽度",
+    "Viewport height": "Viewport 高度"
+  }
+}

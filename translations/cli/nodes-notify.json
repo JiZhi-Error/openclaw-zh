@@ -1,0 +1,14 @@
+{
+  "file": "src/cli/nodes-cli/register.notify.ts",
+  "description": "nodes notify 子命令帮助",
+  "replacements": {
+    "Send a local notification on a node (mac only)": "在节点上发送本地通知（仅 mac）",
+    "Node id, name, or IP": "节点 ID、名称或 IP",
+    "Notification title": "通知标题",
+    "Notification body": "通知正文",
+    "Notification sound": "通知声音",
+    "Notification priority": "通知优先级",
+    "Delivery mode": "投递模式",
+    "Node invoke timeout in ms (default 15000)": "节点调用超时（毫秒，默认 15000）"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "file": "src/cli/program/message/register.poll.ts",
+  "description": "message poll 子命令帮助",
+  "replacements": {
+    "Send a poll": "发送投票",
+    "Poll question": "投票问题",
+    "Poll option (repeat 2-12 times)": "投票选项（可重复 2-12 次）",
+    "Allow multiple selections": "允许多选",
+    "Poll duration in hours (Discord)": "投票时长（小时，Discord）",
+    "Poll duration in seconds (Telegram; 5-600)": "投票时长（秒，Telegram；5-600）",
+    "Send an anonymous poll (Telegram)": "发送匿名投票（Telegram）",
+    "Send a non-anonymous poll (Telegram)": "发送非匿名投票（Telegram）",
+    "Optional message body": "可选消息正文",
+    "Send poll silently without notification (Telegram + Discord where supported)": "静默发送投票而不通知（Telegram + Discord，若支持）",
+    "Thread id (Telegram forum topic / Slack thread ts)": "线程 ID（Telegram forum topic / Slack thread ts）"
+  }
+}

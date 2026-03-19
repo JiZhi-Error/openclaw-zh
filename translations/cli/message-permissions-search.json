@@ -1,0 +1,15 @@
+{
+  "file": "src/cli/program/message/register.permissions-search.ts",
+  "description": "message permissions/search 子命令帮助",
+  "replacements": {
+    "Fetch channel permissions": "获取频道权限",
+    "Search Discord messages": "搜索 Discord 消息",
+    "Guild id": "Guild ID",
+    "Search query": "搜索查询",
+    "Channel id": "频道 ID",
+    "Channel id (repeat)": "频道 ID（可重复）",
+    "Author id": "作者 ID",
+    "Author id (repeat)": "作者 ID（可重复）",
+    "Result limit": "结果数量上限"
+  }
+}

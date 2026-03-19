@@ -1,0 +1,11 @@
+{
+  "file": "src/cli/program/message/register.pins.ts",
+  "description": "message pin 子命令帮助",
+  "replacements": {
+    "Pin a message": "置顶一条消息",
+    "Message id": "消息 ID",
+    "Unpin a message": "取消置顶一条消息",
+    "List pinned messages": "列出已置顶消息",
+    "Result limit": "结果数量上限"
+  }
+}

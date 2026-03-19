@@ -1,0 +1,31 @@
+{
+  "file": "src/cli/browser-cli-manage.ts",
+  "description": "browser manage 子命令帮助",
+  "replacements": {
+    "Show browser status": "显示浏览器状态",
+    "Start the browser (no-op if already running)": "启动浏览器（若已运行则不执行任何操作）",
+    "Stop the browser (best-effort)": "停止浏览器（尽力而为）",
+    "Reset browser profile (moves it to Trash)": "重置浏览器 profile（会移入废纸篓）",
+    "List open tabs": "列出打开的标签页",
+    "Tab shortcuts (index-based)": "标签页快捷操作（基于索引）",
+    "Open a new tab (about:blank)": "打开新标签页（about:blank）",
+    "Focus tab by index (1-based)": "按索引聚焦标签页（从 1 开始）",
+    "Tab index (1-based)": "标签页索引（从 1 开始）",
+    "Close tab by index (1-based); default: first tab": "按索引关闭标签页（从 1 开始）；默认：第一个标签页",
+    "Open a URL in a new tab": "在新标签页中打开 URL",
+    "URL to open": "要打开的 URL",
+    "Focus a tab by target id (or unique prefix)": "通过 target ID（或唯一前缀）聚焦标签页",
+    "Target id or unique prefix": "Target ID 或唯一前缀",
+    "Close a tab (target id optional)": "关闭标签页（target ID 可选）",
+    "Target id or unique prefix (optional)": "Target ID 或唯一前缀（可选）",
+    "List all browser profiles": "列出所有浏览器 profile",
+    "Create a new browser profile": "创建新的浏览器 profile",
+    "Profile name (lowercase, numbers, hyphens)": "Profile 名称（小写字母、数字、连字符）",
+    "Profile color (hex format, e.g. #0066CC)": "Profile 颜色（十六进制格式，例如 #0066CC）",
+    "CDP URL for remote Chrome (http/https)": "远程 Chrome 的 CDP URL（http/https）",
+    "User data dir for existing-session Chromium attach": "existing-session Chromium attach 使用的用户数据目录",
+    "Profile driver (openclaw|existing-session). Default: openclaw": "Profile 驱动（openclaw|existing-session）。默认：openclaw",
+    "Delete a browser profile": "删除浏览器 profile",
+    "Profile name to delete": "要删除的 profile 名称"
+  }
+}

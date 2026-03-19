@@ -1,0 +1,22 @@
+{
+  "file": "src/cli/logs-cli.ts",
+  "description": "logs 命令帮助",
+  "replacements": {
+    "Tail gateway file logs via RPC": "通过 RPC 追踪网关日志文件",
+    "Max lines to return": "返回的最大行数",
+    "Max bytes to read": "读取的最大字节数",
+    "Follow log output": "持续跟随日志输出",
+    "Polling interval in ms": "轮询间隔（毫秒）",
+    "Emit JSON log lines": "输出 JSON 日志行",
+    "Plain text output (no ANSI styling)": "纯文本输出（无 ANSI 样式）",
+    "Disable ANSI colors": "禁用 ANSI 颜色",
+    "Display timestamps in local timezone": "以本地时区显示时间戳",
+    "Docs:": "文档：",
+    "openclaw logs: output ${target} closed (${code}). Stopping tail.": "openclaw logs：${target} 输出已关闭（${code}）。停止追踪。",
+    "Gateway not reachable. Is it running and accessible?": "网关不可达。它是否正在运行且可访问？",
+    "Hint: run \\`${formatCliCommand(\"openclaw doctor\")}\\`.": "提示：运行 \\`${formatCliCommand(\"openclaw doctor\")}\\`。",
+    "Log tail truncated (increase --max-bytes).": "日志尾部已截断（请增大 --max-bytes）。",
+    "Log cursor reset (file rotated).": "日志游标已重置（文件已轮转）。",
+    "Log file:": "日志文件："
+  }
+}

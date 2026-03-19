@@ -1,0 +1,9 @@
+{
+  "file": "src/cli/docs-cli.ts",
+  "description": "docs 命令帮助",
+  "replacements": {
+    "Search the live OpenClaw docs": "搜索在线 OpenClaw 文档",
+    "Search query": "搜索查询",
+    "Docs:": "文档："
+  }
+}

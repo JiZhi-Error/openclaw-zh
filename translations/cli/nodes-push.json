@@ -1,0 +1,11 @@
+{
+  "file": "src/cli/nodes-cli/register.push.ts",
+  "description": "nodes push 子命令帮助",
+  "replacements": {
+    "Send an APNs test push to an iOS node": "向 iOS 节点发送 APNs 测试推送",
+    "Node id, name, or IP": "节点 ID、名称或 IP",
+    "Push title": "推送标题",
+    "Push body": "推送正文",
+    "Override APNs environment": "覆盖 APNs 环境"
+  }
+}

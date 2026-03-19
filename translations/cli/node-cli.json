@@ -1,0 +1,28 @@
+{
+  "file": "src/cli/node-cli/register.ts",
+  "description": "node 命令帮助",
+  "replacements": {
+    "Run and manage the headless node host service": "运行并管理无头 node host 服务",
+    "Examples:": "示例：",
+    "Run the node host in the foreground.": "在前台运行 node host。",
+    "Check node host service status.": "检查 node host 服务状态。",
+    "Install the node host service.": "安装 node host 服务。",
+    "Restart the installed node host service.": "重启已安装的 node host 服务。",
+    "Docs:": "文档：",
+    "Run the headless node host (foreground)": "运行无头 node host（前台）",
+    "Gateway host": "网关主机",
+    "Gateway port": "网关端口",
+    "Use TLS for the gateway connection": "为网关连接启用 TLS",
+    "Expected TLS certificate fingerprint (sha256)": "预期的 TLS 证书指纹（sha256）",
+    "Override node id (clears pairing token)": "覆盖 node ID（会清除配对令牌）",
+    "Override node display name": "覆盖 node 显示名称",
+    "Show node host status": "显示 node host 状态",
+    "Output JSON": "输出 JSON",
+    "Install the node host service (launchd/systemd/schtasks)": "安装 node host 服务（launchd/systemd/schtasks）",
+    "Service runtime (node|bun). Default: node": "服务运行时（node|bun）。默认：node",
+    "Reinstall/overwrite if already installed": "如果已安装则重新安装/覆盖",
+    "Uninstall the node host service (launchd/systemd/schtasks)": "卸载 node host 服务（launchd/systemd/schtasks）",
+    "Stop the node host service (launchd/systemd/schtasks)": "停止 node host 服务（launchd/systemd/schtasks）",
+    "Restart the node host service (launchd/systemd/schtasks)": "重启 node host 服务（launchd/systemd/schtasks）"
+  }
+}

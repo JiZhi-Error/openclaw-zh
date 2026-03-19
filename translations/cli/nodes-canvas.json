@@ -1,0 +1,30 @@
+{
+  "file": "src/cli/nodes-cli/register.canvas.ts",
+  "description": "nodes canvas 子命令帮助",
+  "replacements": {
+    "Capture or render canvas content from a paired node": "从已配对节点捕获或渲染 canvas 内容",
+    "Capture a canvas snapshot (prints MEDIA:<path>)": "捕获 canvas 快照（输出 MEDIA:<path>）",
+    "Node id, name, or IP": "节点 ID、名称或 IP",
+    "Image format": "图像格式",
+    "Max width in px (optional)": "最大宽度（像素，可选）",
+    "JPEG quality (optional)": "JPEG 质量（可选）",
+    "Node invoke timeout in ms (default 20000)": "节点调用超时（毫秒，默认 20000）",
+    "Show the canvas (optionally with a target URL/path)": "显示 canvas（可选指定目标 URL/路径）",
+    "Target URL/path (optional)": "目标 URL/路径（可选）",
+    "Placement x coordinate": "放置的 x 坐标",
+    "Placement y coordinate": "放置的 y 坐标",
+    "Placement width": "放置宽度",
+    "Placement height": "放置高度",
+    "Node invoke timeout in ms": "节点调用超时（毫秒）",
+    "Hide the canvas": "隐藏 canvas",
+    "Navigate the canvas to a URL": "让 canvas 导航到某个 URL",
+    "Target URL/path": "目标 URL/路径",
+    "Evaluate JavaScript in the canvas": "在 canvas 中执行 JavaScript",
+    "JavaScript to evaluate": "要执行的 JavaScript",
+    "Render A2UI content on the canvas": "在 canvas 上渲染 A2UI 内容",
+    "Push A2UI JSONL to the canvas": "将 A2UI JSONL 推送到 canvas",
+    "Path to JSONL payload": "JSONL payload 路径",
+    "Render a quick A2UI text payload": "快速渲染 A2UI 文本 payload",
+    "Reset A2UI renderer state": "重置 A2UI 渲染器状态"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "file": "src/cli/dns-cli.ts",
+  "description": "dns 命令帮助与输出",
+  "replacements": {
+    "DNS helpers for wide-area discovery (Tailscale + CoreDNS)": "用于广域发现的 DNS 辅助工具（Tailscale + CoreDNS）",
+    "Docs:": "文档：",
+    "Set up CoreDNS to serve your discovery domain for unicast DNS-SD (Wide-Area Bonjour)": "设置 CoreDNS，为你的发现域提供单播 DNS-SD（Wide-Area Bonjour）服务",
+    "Wide-area discovery domain (e.g. openclaw.internal)": "广域发现域名（例如 openclaw.internal）",
+    "Install/update CoreDNS config and (re)start the service (requires sudo)": "安装/更新 CoreDNS 配置并（重新）启动服务（需要 sudo）",
+    "No wide-area domain configured. Set discovery.wideArea.domain or pass --domain.": "未配置广域发现域名。请设置 discovery.wideArea.domain 或传入 --domain。",
+    "DNS setup": "DNS 设置",
+    "Recommended ~/.openclaw/openclaw.json:": "推荐的 ~/.openclaw/openclaw.json：",
+    "Tailscale admin (DNS → Nameservers):": "Tailscale 管理后台（DNS → Nameservers）：",
+    "- Add nameserver: ${tailnetIPv4 ?? \"<this machine's tailnet IPv4>\"}": "- 添加 nameserver：${tailnetIPv4 ?? \"<this machine's tailnet IPv4>\"}",
+    "- Restrict to domain (Split DNS): ${wideAreaDomain.replace(/\\.$/, \"\")}": "- 限制到域名（Split DNS）：${wideAreaDomain.replace(/\\.$/, \"\")}",
+    "Run with --apply to install CoreDNS and configure it.": "使用 --apply 安装 CoreDNS 并完成配置。",
+    "dns setup is currently supported on macOS only": "dns setup 目前仅支持 macOS",
+    "no tailnet IP detected; ensure Tailscale is running on this machine": "未检测到 tailnet IP；请确认此机器上的 Tailscale 正在运行",
+    "; created by openclaw dns setup (will be overwritten by the gateway when wide-area discovery is enabled)": "; 由 openclaw dns setup 创建（启用广域发现后会被 gateway 覆盖）",
+    "Starting CoreDNS (sudo)…": "正在启动 CoreDNS（sudo）……",
+    "Note: enable discovery.wideArea.enabled in ~/.openclaw/openclaw.json on the gateway and restart the gateway so it writes the DNS-SD zone.": "注意：请在 gateway 的 ~/.openclaw/openclaw.json 中启用 discovery.wideArea.enabled，并重启 gateway 以写入 DNS-SD zone。"
+  }
+}

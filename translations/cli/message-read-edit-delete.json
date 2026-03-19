@@ -1,0 +1,17 @@
+{
+  "file": "src/cli/program/message/register.read-edit-delete.ts",
+  "description": "message read/edit/delete 子命令帮助",
+  "replacements": {
+    "Read recent messages": "读取最近消息",
+    "Result limit": "结果数量上限",
+    "Read/search before id": "读取/搜索此 ID 之前的消息",
+    "Read/search after id": "读取/搜索此 ID 之后的消息",
+    "Read around id": "读取此 ID 附近的消息",
+    "Include thread replies (Discord)": "包含线程回复（Discord）",
+    "Edit a message": "编辑消息",
+    "Message id": "消息 ID",
+    "Message body": "消息正文",
+    "Thread id (Telegram forum thread)": "线程 ID（Telegram forum thread）",
+    "Delete a message": "删除消息"
+  }
+}

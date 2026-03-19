@@ -1,0 +1,22 @@
+{
+  "file": "src/cli/program/message/register.thread.ts",
+  "description": "message thread 子命令帮助",
+  "replacements": {
+    "Thread actions": "线程操作",
+    "Create a thread": "创建线程",
+    "Thread name": "线程名称",
+    "Message id (optional)": "消息 ID（可选）",
+    "Initial thread message text": "线程初始消息文本",
+    "Thread auto-archive minutes": "线程自动归档分钟数",
+    "List threads": "列出线程",
+    "Guild id": "Guild ID",
+    "Channel id": "频道 ID",
+    "Include archived threads": "包含已归档线程",
+    "Read/search before id": "读取/搜索此 ID 之前的内容",
+    "Result limit": "结果数量上限",
+    "Reply in a thread": "在线程中回复",
+    "Message body": "消息正文",
+    "Attach media (image/audio/video/document). Accepts local paths or URLs.": "附加媒体（图片/音频/视频/文档）。支持本地路径或 URL。",
+    "Reply-to message id": "回复目标消息 ID"
+  }
+}

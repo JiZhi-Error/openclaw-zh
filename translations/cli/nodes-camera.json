@@ -1,0 +1,20 @@
+{
+  "file": "src/cli/nodes-cli/register.camera.ts",
+  "description": "nodes camera 子命令帮助",
+  "replacements": {
+    "Capture camera media from a paired node": "从已配对节点捕获摄像头媒体",
+    "List available cameras on a node": "列出节点上可用的摄像头",
+    "Node id, name, or IP": "节点 ID、名称或 IP",
+    "Capture a photo from a node camera (prints MEDIA:<path>)": "从节点摄像头拍摄照片（输出 MEDIA:<path>）",
+    "Camera facing": "摄像头朝向",
+    "Camera device id (from nodes camera list)": "摄像头设备 ID（来自 nodes camera list）",
+    "Max width in px (optional)": "最大宽度（像素，可选）",
+    "JPEG quality (default 0.9)": "JPEG 质量（默认 0.9）",
+    "Delay before capture in ms (macOS default 2000)": "拍摄前延迟（毫秒，macOS 默认 2000）",
+    "Node invoke timeout in ms (default 20000)": "节点调用超时（毫秒，默认 20000）",
+    "Capture a short video clip from a node camera (prints MEDIA:<path>)": "从节点摄像头录制短视频（输出 MEDIA:<path>）",
+    "Duration (default 3000ms; supports ms/s/m, e.g. 10s)": "时长（默认 3000ms；支持 ms/s/m，例如 10s）",
+    "Disable audio capture": "禁用音频采集",
+    "Node invoke timeout in ms (default 90000)": "节点调用超时（毫秒，默认 90000）"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "file": "src/cli/browser-cli.ts",
+  "description": "browser 主命令帮助",
+  "replacements": {
+    "Manage OpenClaw's dedicated browser (Chrome/Chromium)": "管理 OpenClaw 专用浏览器（Chrome/Chromium）",
+    "Browser profile name (default from config)": "浏览器 profile 名称（默认取自配置）",
+    "Output machine-readable JSON": "输出机器可读 JSON",
+    "Examples:": "示例：",
+    "Docs:": "文档：",
+    "Missing subcommand. Try: \"${formatCliCommand(\"openclaw browser status\")}\"": "缺少子命令。可尝试：\"${formatCliCommand(\"openclaw browser status\")}\""
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "file": "src/cli/browser-cli-actions-input/register.element.ts",
+  "description": "browser 元素操作子命令帮助",
+  "replacements": {
+    "Click an element by ref from snapshot": "通过 snapshot 中的 ref 点击元素",
+    "Ref id from snapshot": "来自 snapshot 的 ref ID",
+    "CDP target id (or unique prefix)": "CDP target ID（或唯一前缀）",
+    "Double click": "双击",
+    "Mouse button to use": "使用的鼠标按键",
+    "Comma-separated modifiers (Shift,Alt,Meta)": "逗号分隔的修饰键（Shift、Alt、Meta）",
+    "Type into an element by ref from snapshot": "通过 snapshot 中的 ref 向元素输入文本",
+    "Text to type": "要输入的文本",
+    "Press Enter after typing": "输入后按 Enter",
+    "Type slowly (human-like)": "慢速输入（模拟真人）",
+    "Press a key": "按下一个按键",
+    "Key to press (e.g. Enter)": "要按下的按键（例如 Enter）",
+    "Hover an element by ai ref": "通过 ai ref 悬停元素",
+    "Scroll an element into view by ref from snapshot": "通过 snapshot 中的 ref 将元素滚动到可视区域",
+    "How long to wait for scroll (default: 20000)": "等待滚动完成的时间（默认：20000）",
+    "Drag from one ref to another": "从一个 ref 拖拽到另一个 ref",
+    "Start ref id": "起始 ref ID",
+    "End ref id": "结束 ref ID",
+    "Select option(s) in a select element": "在 select 元素中选择选项",
+    "Option values to select": "要选择的选项值"
+  }
+}

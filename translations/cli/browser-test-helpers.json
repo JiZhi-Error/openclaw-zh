@@ -1,0 +1,9 @@
+{
+  "file": "src/cli/browser-cli-test-helpers.ts",
+  "description": "browser 测试辅助命令选项",
+  "replacements": {
+    "Browser profile": "浏览器 profile",
+    "Output JSON": "输出 JSON",
+    "Gateway WebSocket URL": "Gateway WebSocket URL"
+  }
+}

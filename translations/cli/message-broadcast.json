@@ -1,0 +1,9 @@
+{
+  "file": "src/cli/program/message/register.broadcast.ts",
+  "description": "message broadcast 子命令帮助",
+  "replacements": {
+    "Broadcast a message to multiple targets": "向多个目标广播一条消息",
+    "Message to send": "要发送的消息",
+    "Media URL": "媒体 URL"
+  }
+}

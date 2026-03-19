@@ -1,0 +1,10 @@
+{
+  "file": "src/cli/cron-cli/register.ts",
+  "description": "cron 主命令帮助",
+  "replacements": {
+    "Manage cron jobs (via Gateway)": "管理 cron 任务（通过 Gateway）",
+    "Docs:": "文档：",
+    "Upgrade tip:": "升级提示：",
+    "run \\`openclaw doctor --fix\\` to normalize legacy cron job storage.": "运行 \\`openclaw doctor --fix\\` 以规范化旧版 cron 任务存储。"
+  }
+}

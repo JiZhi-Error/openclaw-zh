@@ -1,0 +1,18 @@
+{
+  "file": "src/cli/tui-cli.ts",
+  "description": "tui 命令帮助",
+  "replacements": {
+    "Open a terminal UI connected to the Gateway": "打开连接到 Gateway 的终端 UI",
+    "Gateway WebSocket URL (defaults to gateway.remote.url when configured)": "Gateway WebSocket URL（已配置时默认使用 gateway.remote.url）",
+    "Gateway token (if required)": "网关令牌（如需要）",
+    "Gateway password (if required)": "网关密码（如需要）",
+    "Session key (default: \"main\", or \"global\" when scope is global)": "会话键（默认：\"main\"；当 scope 为 global 时为 \"global\"）",
+    "Deliver assistant replies": "投递助手回复",
+    "Thinking level override": "思考等级覆盖",
+    "Send an initial message after connecting": "连接后发送一条初始消息",
+    "Agent timeout in ms (defaults to agents.defaults.timeoutSeconds)": "Agent 超时时间（毫秒，默认取 agents.defaults.timeoutSeconds）",
+    "History entries to load": "要加载的历史条目数",
+    "Docs:": "文档：",
+    "warning: invalid --timeout-ms \"${String(opts.timeoutMs)}\"; ignoring": "警告：无效的 --timeout-ms \"${String(opts.timeoutMs)}\"；已忽略"
+  }
+}
