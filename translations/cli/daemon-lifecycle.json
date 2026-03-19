@@ -1,0 +1,15 @@
+{
+  "file": "src/cli/daemon-cli/lifecycle.ts",
+  "description": "gateway 服务生命周期输出",
+  "replacements": {
+    "Gateway restart is disabled in the running gateway config (commands.restart=false); unmanaged SIGUSR1 restart would be ignored": "运行中的网关配置已禁用重启（commands.restart=false）；对非托管进程发送 SIGUSR1 重启会被忽略",
+    "Gateway stop signal sent to unmanaged process${pids.length === 1 ? \"\" : \"es\"} on port ${port}: ${formatGatewayPidList(pids)}.": "已向端口 ${port} 上的非托管网关进程发送停止信号${pids.length === 1 ? \"\" : \"们\"}：${formatGatewayPidList(pids)}。",
+    "multiple gateway processes are listening on port ${port}: ${formatGatewayPidList(pids)}; use \"openclaw gateway status --deep\" before retrying restart": "端口 ${port} 上有多个网关进程在监听：${formatGatewayPidList(pids)}；重试重启前请先使用 \"openclaw gateway status --deep\" 检查。",
+    "Gateway restart signal sent to unmanaged process on port ${port}: ${pids[0]}.": "已向端口 ${port} 上的非托管网关进程发送重启信号：${pids[0]}。",
+    "Timed out after ${restartWaitSeconds}s waiting for gateway port ${restartPort} to become healthy.": "等待 ${restartWaitSeconds} 秒后，网关端口 ${restartPort} 仍未恢复健康状态，已超时。",
+    "Gateway restart timed out after ${restartWaitSeconds}s waiting for health checks.": "等待健康检查 ${restartWaitSeconds} 秒后，Gateway 重启超时。",
+    "Found stale gateway process(es): ${health.staleGatewayPids.join(\", \")}.": "发现残留网关进程：${health.staleGatewayPids.join(\", \")}。",
+    "Stopping stale process(es) and retrying restart...": "正在停止残留进程并重试重启……",
+    "Gateway process is running but port ${restartPort} is still free (startup hang/crash loop or very slow VM startup).": "网关进程正在运行，但端口 ${restartPort} 仍处于空闲状态（可能是启动卡死、崩溃循环，或虚拟机启动过慢）。"
+  }
+}

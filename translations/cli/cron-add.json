@@ -34,6 +34,21 @@
     "Delivery channel (${getCronChannelOptions()})": "投递渠道（${getCronChannelOptions()}）",
     "Delivery destination (E.164, Telegram chatId, or Discord channel/user)": "投递目标（E.164、Telegram chatId 或 Discord channel/user）",
     "Channel account id for delivery (multi-account setups)": "投递所用的渠道账号 ID（多账号场景）",
-    "Do not fail the job if delivery fails": "即使投递失败也不要让任务失败"
+    "Do not fail the job if delivery fails": "即使投递失败也不要让任务失败",
+    "Choose either --stagger or --exact, not both": "请在 --stagger 和 --exact 中二选一，不能同时使用。",
+    "Choose exactly one schedule: --at, --every, or --cron": "必须且只能选择一种调度方式：--at、--every 或 --cron。",
+    "--stagger/--exact are only valid with --cron": "--stagger/--exact 只能与 --cron 一起使用。",
+    "Invalid --at; use ISO time or duration like 20m": "无效的 --at；请使用 ISO 时间或 20m 这样的时长。",
+    "Invalid --every; use e.g. 10m, 1h, 1d": "无效的 --every；请使用例如 10m、1h、1d 这样的时长。",
+    "--wake must be now or next-heartbeat": "--wake 必须是 now 或 next-heartbeat。",
+    "Choose at most one of --announce or --no-deliver": "--announce 和 --no-deliver 最多只能选一个。",
+    "Choose exactly one payload: --system-event or --message": "必须且只能选择一种 payload：--system-event 或 --message。",
+    "--session must be main, isolated, current, or session:<id>": "--session 必须是 main、isolated、current 或 session:<id>。",
+    "Choose --delete-after-run or --keep-after-run, not both": "请在 --delete-after-run 和 --keep-after-run 中二选一，不能同时使用。",
+    "Main jobs require --system-event (systemEvent).": "main 任务必须使用 --system-event（systemEvent）。",
+    "Isolated/current/custom-session jobs require --message (agentTurn).": "isolated/current/custom-session 任务必须使用 --message（agentTurn）。",
+    "--announce/--no-deliver require a non-main agentTurn session target.": "--announce/--no-deliver 需要一个非 main 的 agentTurn 会话目标。",
+    "--account requires a non-main agentTurn job with delivery.": "--account 需要一个带投递的非 main agentTurn 任务。",
+    "--name is required": "--name 为必填项。"
   }
 }

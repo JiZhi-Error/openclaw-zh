@@ -7,6 +7,8 @@
     "CDP target id (or unique prefix)": "CDP target ID（或唯一前缀）",
     "Resize the viewport": "调整 viewport 尺寸",
     "Viewport width": "Viewport 宽度",
-    "Viewport height": "Viewport 高度"
+    "Viewport height": "Viewport 高度",
+    "navigated to ${result.url ?? url}": "已导航到 ${result.url ?? url}",
+    "resized to ${width}x${height}": "已调整为 ${width}x${height}"
   }
 }

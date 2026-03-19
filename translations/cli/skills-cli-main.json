@@ -8,6 +8,7 @@
     "Output as JSON": "输出为 JSON",
     "Show only eligible (ready to use) skills": "仅显示可用（可直接使用）的技能",
     "Show more details including missing requirements": "显示更多细节，包括缺失的依赖条件",
+    "-v, --verbose": "-v, --verbose",
     "Show detailed information about a skill": "显示某个技能的详细信息",
     "Skill name": "技能名称",
     "Check which skills are ready vs missing requirements": "检查哪些技能已就绪、哪些仍缺少条件"

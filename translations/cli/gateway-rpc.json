@@ -1,0 +1,11 @@
+{
+  "file": "src/cli/gateway-rpc.ts",
+  "description": "gateway RPC 公共选项与进度提示",
+  "replacements": {
+    "Gateway WebSocket URL (defaults to gateway.remote.url when configured)": "网关 WebSocket URL（已配置时默认使用 gateway.remote.url）",
+    "Gateway token (if required)": "网关令牌（如需要）",
+    "Timeout in ms": "超时时间（毫秒）",
+    "Wait for final response (agent)": "等待最终响应（agent）",
+    "Gateway ${method}": "网关 ${method}"
+  }
+}

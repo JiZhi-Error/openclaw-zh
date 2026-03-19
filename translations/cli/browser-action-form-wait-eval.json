@@ -18,6 +18,8 @@
     "Evaluate a function against the page or a ref": "对页面或 ref 执行函数",
     "Function source, e.g. (el) => el.textContent": "函数字符串，例如 (el) => el.textContent",
     "Ref from snapshot": "来自 snapshot 的 ref",
-    "Missing --fn": "缺少 --fn"
+    "Missing --fn": "缺少 --fn",
+    "filled ${fields.length} field(s)": "已填写 ${fields.length} 个字段",
+    "wait complete": "等待完成"
   }
 }

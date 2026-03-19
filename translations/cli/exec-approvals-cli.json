@@ -28,6 +28,10 @@
     "Pattern not found.": "未找到该模式。",
     "Approvals": "审批",
     "No allowlist entries.": "没有 allowlist 条目。",
-    "Allowlist": "Allowlist"
+    "Allowlist": "Allowlist",
+    "Target: ${params.targetLabel}": "目标：${params.targetLabel}",
+    "Last Used": "最近使用",
+    "Pattern required.": "必须提供模式。",
+    "Showing local approvals.": "正在显示本地审批。"
   }
 }

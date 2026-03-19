@@ -16,6 +16,11 @@
     "Set a ${kind}Storage key": "设置 ${kind}Storage key",
     "Key": "Key",
     "Value": "值",
-    "Clear all ${kind}Storage keys": "清除所有 ${kind}Storage key"
+    "Clear all ${kind}Storage keys": "清除所有 ${kind}Storage key",
+    "Missing required --url option for cookies set": "cookies set 缺少必需的 --url 选项",
+    "cookie set: ${name}": "cookie 已设置：${name}",
+    "cookies cleared": "cookies 已清除",
+    "${kind}Storage set: ${key}": "${kind}Storage 已设置：${key}",
+    "${kind}Storage cleared": "${kind}Storage 已清除"
   }
 }

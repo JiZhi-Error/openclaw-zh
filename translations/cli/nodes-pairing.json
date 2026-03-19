@@ -8,6 +8,9 @@
     "Reject a pending pairing request": "拒绝待处理的配对请求",
     "Rename a paired node (display name override)": "重命名已配对节点（覆盖显示名称）",
     "Node id, name, or IP": "节点 ID、名称或 IP",
-    "New display name": "新的显示名称"
+    "New display name": "新的显示名称",
+    "No pending pairing requests.": "没有待处理的配对请求。",
+    "--node and --name required": "--node 和 --name 为必填项",
+    "node rename ok: ${nodeId} -> ${name}": "节点重命名成功：${nodeId} -> ${name}"
   }
 }

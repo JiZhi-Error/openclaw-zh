@@ -8,6 +8,8 @@
     "Channel account id (accountId)": "渠道账号 ID（accountId）",
     "Output result as JSON": "以 JSON 输出结果",
     "Print payload and skip sending": "输出 payload 并跳过发送",
-    "Verbose logging": "详细日志"
+    "Verbose logging": "详细日志",
+    "-t, --target <dest>": "-t, --target <dest>",
+    "message.help({ error: true })": "message.help({ error: true })"
   }
 }

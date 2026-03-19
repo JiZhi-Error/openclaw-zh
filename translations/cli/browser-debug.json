@@ -16,6 +16,10 @@
     "Disable snapshots": "禁用快照",
     "Include sources (bigger traces)": "包含源码（trace 会更大）",
     "Stop trace recording and write a .zip": "停止录制 trace 并写出 .zip 文件",
-    "Output path within openclaw temp dir (e.g. trace.zip or /tmp/openclaw/trace.zip)": "openclaw 临时目录内的输出路径（例如 trace.zip 或 /tmp/openclaw/trace.zip）"
+    "Output path within openclaw temp dir (e.g. trace.zip or /tmp/openclaw/trace.zip)": "openclaw 临时目录内的输出路径（例如 trace.zip 或 /tmp/openclaw/trace.zip）",
+    "No page errors.": "没有页面错误。",
+    "No requests recorded.": "没有记录到请求。",
+    "trace started": "trace 录制已开始",
+    "${e.name ? `${e.name}: ` : \"\"}${e.message}": "${e.name ? `${e.name}：` : \"\"}${e.message}"
   }
 }

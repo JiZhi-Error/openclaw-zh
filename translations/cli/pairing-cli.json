@@ -18,6 +18,11 @@
     "Too many arguments. Use: ${formatCliCommand(\"openclaw pairing approve --channel <channel> <code>\")}": "参数过多。请使用：${formatCliCommand(\"openclaw pairing approve --channel <channel> <code>\")}",
     "No pending pairing request found for code: ${String(resolvedCode)}": "未找到与该配对码对应的待处理请求：${String(resolvedCode)}",
     "Approved": "已批准",
-    "Failed to notify requester: ${String(err)}": "通知请求方失败：${String(err)}"
+    "Failed to notify requester: ${String(err)}": "通知请求方失败：${String(err)}",
+    "Channel required": "必须提供渠道",
+    "Channel ${normalized} does not support pairing": "渠道 ${normalized} 不支持配对",
+    "Invalid channel: ${value}": "无效渠道：${value}",
+    "Channel (${channels.join(\", \")})": "渠道（${channels.join(\", \")}）",
+    "${theme.success(\"Approved\")} ${theme.muted(channel)} sender ${theme.command(approved.id)}.": "${theme.success(\"已批准\")} ${theme.muted(channel)} 配对发送方 ${theme.command(approved.id)}。"
   }
 }

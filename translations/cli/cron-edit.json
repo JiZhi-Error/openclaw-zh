@@ -44,6 +44,25 @@
     "Failure alert destination": "失败告警目标",
     "Minimum time between alerts (e.g. 1h, 30m)": "告警之间的最小间隔（如 1h、30m）",
     "Failure alert delivery mode (announce or webhook)": "失败告警投递模式（announce 或 webhook）",
-    "Account ID for failure alert channel (multi-account setups)": "失败告警渠道的账号 ID（多账号场景）"
+    "Account ID for failure alert channel (multi-account setups)": "失败告警渠道的账号 ID（多账号场景）",
+    "Main jobs cannot use --message; use --system-event or --session isolated.": "main 任务不能使用 --message；请改用 --system-event 或 --session isolated。",
+    "Isolated jobs cannot use --system-event; use --message or --session main.": "isolated 任务不能使用 --system-event；请改用 --message 或 --session main。",
+    "Choose --announce or --no-deliver (not multiple).": "请在 --announce 和 --no-deliver 中二选一，不要同时使用。",
+    "Choose either --stagger or --exact, not both": "请在 --stagger 和 --exact 中二选一，不能同时使用。",
+    "Choose --enable or --disable, not both": "请在 --enable 和 --disable 中二选一，不能同时使用。",
+    "Choose --delete-after-run or --keep-after-run, not both": "请在 --delete-after-run 和 --keep-after-run 中二选一，不能同时使用。",
+    "Use --agent or --clear-agent, not both": "请使用 --agent 或 --clear-agent，不能同时使用。",
+    "Use --session-key or --clear-session-key, not both": "请使用 --session-key 或 --clear-session-key，不能同时使用。",
+    "Choose at most one schedule change": "最多只能修改一种调度方式。",
+    "--stagger/--exact/--tz are only valid for cron schedules": "--stagger/--exact/--tz 仅适用于 cron 调度。",
+    "Invalid --at": "无效的 --at。",
+    "Invalid --every": "无效的 --every。",
+    "unknown cron job id: ${id}": "未知的 cron 任务 ID：${id}",
+    "Current job is not a cron schedule; use --cron to convert first": "当前任务不是 cron 调度；请先用 --cron 转换。",
+    "Choose at most one payload change": "最多只能修改一种 payload。",
+    "Use --no-failure-alert alone (without failure-alert-* options).": "使用 --no-failure-alert 时不能同时带 failure-alert-* 选项。",
+    "Invalid --failure-alert-after (must be a positive integer).": "无效的 --failure-alert-after（必须是正整数）。",
+    "Invalid --failure-alert-cooldown.": "无效的 --failure-alert-cooldown。",
+    "Invalid --failure-alert-mode (must be 'announce' or 'webhook').": "无效的 --failure-alert-mode（必须是 'announce' 或 'webhook'）。"
   }
 }

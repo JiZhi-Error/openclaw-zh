@@ -20,6 +20,11 @@
     "Accept the dialog": "接受对话框",
     "Dismiss the dialog": "关闭对话框",
     "Prompt response text": "Prompt 响应文本",
-    "How long to wait for the next dialog (default: 120000)": "等待下一个对话框的时间（默认：120000）"
+    "How long to wait for the next dialog (default: 120000)": "等待下一个对话框的时间（默认：120000）",
+    "uploads directory (${DEFAULT_UPLOAD_DIR})": "上传目录（${DEFAULT_UPLOAD_DIR}）",
+    "downloaded: ${shortenHomePath(result.download.path)}": "已下载：${shortenHomePath(result.download.path)}",
+    "upload armed for ${paths.length} file(s)": "已为 ${paths.length} 个文件预置上传",
+    "Specify --accept or --dismiss": "请指定 --accept 或 --dismiss",
+    "dialog armed": "对话框已预置"
   }
 }

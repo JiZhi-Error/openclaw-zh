@@ -21,6 +21,11 @@
     "Start ref id": "起始 ref ID",
     "End ref id": "结束 ref ID",
     "Select option(s) in a select element": "在 select 元素中选择选项",
-    "Option values to select": "要选择的选项值"
+    "Option values to select": "要选择的选项值",
+    "clicked ref ${refValue}${suffix}": "已点击 ref ${refValue}${suffix}",
+    "typed into ref ${refValue}": "已向 ref ${refValue} 输入内容",
+    "hovered ref ${ref}": "已悬停到 ref ${ref}",
+    "scrolled into view: ${refValue}": "已滚动到可见区域：${refValue}",
+    "dragged ${startRef} → ${endRef}": "已拖拽 ${startRef} → ${endRef}"
   }
 }

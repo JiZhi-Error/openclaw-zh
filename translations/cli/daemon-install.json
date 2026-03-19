@@ -1,0 +1,12 @@
+{
+  "file": "src/cli/daemon-cli/install.ts",
+  "description": "gateway install 运行期输出",
+  "replacements": {
+    "Invalid port": "无效端口",
+    "Invalid --runtime (use \"node\" or \"bun\")": "无效的 --runtime 值（请使用 \"node\" 或 \"bun\"）",
+    "Gateway service check failed: ${String(err)}": "网关服务检查失败：${String(err)}",
+    "Gateway service already ${service.loadedText}.": "网关服务已${service.loadedText}。",
+    "Reinstall with: ${formatCliCommand(\"openclaw gateway install --force\")}": "重新安装请使用：${formatCliCommand(\"openclaw gateway install --force\")}",
+    "Gateway install blocked: ${tokenResolution.unavailableReason}": "网关安装被阻止：${tokenResolution.unavailableReason}"
+  }
+}

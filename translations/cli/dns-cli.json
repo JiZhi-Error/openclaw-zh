@@ -16,6 +16,12 @@
     "Run with --apply to install CoreDNS and configure it.": "使用 --apply 安装 CoreDNS 并完成配置。",
     "dns setup is currently supported on macOS only": "dns setup 目前仅支持 macOS",
     "no tailnet IP detected; ensure Tailscale is running on this machine": "未检测到 tailnet IP；请确认此机器上的 Tailscale 正在运行",
+    "${cmd} ${args.join(\" \")} failed: ${errText}": "${cmd} ${args.join(\" \")} 失败：${errText}",
+    "sudo tee ${filePath} failed: exit ${res.status ?? \"unknown\"}": "sudo tee ${filePath} 失败：退出码 ${res.status ?? \"unknown\"}",
+    "failed to resolve Homebrew prefix": "无法解析 Homebrew 前缀路径",
+    "Zone file": "Zone 文件",
+    "Tailnet IP": "Tailnet IP",
+    "${tailnetIPv4 ?? \"—\"}${tailnetIPv6 ? ` (v6 ${tailnetIPv6})` : \"\"}": "${tailnetIPv4 ?? \"—\"}${tailnetIPv6 ? `（IPv6 ${tailnetIPv6}）` : \"\"}",
     "; created by openclaw dns setup (will be overwritten by the gateway when wide-area discovery is enabled)": "; 由 openclaw dns setup 创建（启用广域发现后会被 gateway 覆盖）",
     "Starting CoreDNS (sudo)…": "正在启动 CoreDNS（sudo）……",
     "Note: enable discovery.wideArea.enabled in ~/.openclaw/openclaw.json on the gateway and restart the gateway so it writes the DNS-SD zone.": "注意：请在 gateway 的 ~/.openclaw/openclaw.json 中启用 discovery.wideArea.enabled，并重启 gateway 以写入 DNS-SD zone。"

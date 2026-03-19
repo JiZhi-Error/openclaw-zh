@@ -1,0 +1,19 @@
+{
+  "file": "src/cli/update-cli/status.ts",
+  "description": "update status 运行时输出",
+  "replacements": {
+    "detached": "分离头指针",
+    "tag ${tag}": "标签 ${tag}",
+    "@ ${shortSha}": "@ ${shortSha}",
+    "git (${update.root ?? \"unknown\"})": "git（${update.root ?? \"未知\"}）",
+    "unknown": "未知",
+    "Install": "安装方式",
+    "Channel": "通道",
+    "Git": "Git",
+    "Update": "更新",
+    "available · ${updateLine}": "可更新 · ${updateLine}",
+    "OpenClaw update status": "OpenClaw 更新状态",
+    "Item": "项目",
+    "Value": "值"
+  }
+}

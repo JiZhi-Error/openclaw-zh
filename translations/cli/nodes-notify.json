@@ -9,6 +9,8 @@
     "Notification sound": "通知声音",
     "Notification priority": "通知优先级",
     "Delivery mode": "投递模式",
-    "Node invoke timeout in ms (default 15000)": "节点调用超时（毫秒，默认 15000）"
+    "Node invoke timeout in ms (default 15000)": "节点调用超时（毫秒，默认 15000）",
+    "missing --title or --body": "缺少 --title 或 --body",
+    "notify ok": "通知发送完成"
   }
 }

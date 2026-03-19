@@ -8,6 +8,17 @@
     "Describe a node (capabilities + supported invoke commands)": "描述节点（能力 + 支持的调用命令）",
     "Node id, name, or IP": "节点 ID、名称或 IP",
     "List pending and paired nodes": "列出待配对和已配对节点",
-    "Invalid --last-connected": "无效的 --last-connected"
+    "Invalid --last-connected": "无效的 --last-connected",
+    "${label}: invalid duration value": "${label}：无效的时长值",
+    " (of ${nodes.length})": "（共 ${nodes.length} 个）",
+    "Known: ${filtered.length}${filteredLabel} · Paired: ${pairedCount} · Connected: ${connectedCount}": "已知：${filtered.length}${filteredLabel} · 已配对：${pairedCount} · 已连接：${connectedCount}",
+    "device: ${n.deviceFamily}": "设备：${n.deviceFamily}",
+    "hw: ${n.modelIdentifier}": "硬件：${n.modelIdentifier}",
+    "perms: ${perms}": "权限：${perms}",
+    "path: ${pathEnv}": "路径：${pathEnv}",
+    "- (none reported)": "- （未报告）",
+    "Pending: ${pendingRows.length} · Paired: ${filteredPaired.length}${filteredLabel}": "待处理：${pendingRows.length} · 已配对：${filteredPaired.length}${filteredLabel}",
+    " (of ${paired.length})": "（共 ${paired.length} 个）",
+    "Last Connect": "最近连接"
   }
 }

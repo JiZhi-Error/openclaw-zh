@@ -12,6 +12,7 @@
     "Print only the setup code": "仅输出设置码",
     "Skip ASCII QR rendering": "跳过 ASCII 二维码渲染",
     "Output JSON": "输出 JSON",
+    "qr --remote": "qr --remote",
     "Use either --token or --password, not both.": "--token 和 --password 只能二选一。",
     "qr --remote requires gateway.remote.url (or gateway.tailscale.mode=serve/funnel).": "qr --remote 需要 gateway.remote.url（或 gateway.tailscale.mode=serve/funnel）。",
     "Pairing QR": "配对二维码",

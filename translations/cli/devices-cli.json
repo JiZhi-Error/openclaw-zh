@@ -46,6 +46,8 @@
     "Flags": "标记",
     "Roles": "角色",
     "Scopes": "范围",
-    "Tokens": "令牌"
+    "Tokens": "令牌",
+    "pairing required": "需要先完成配对",
+    "local loopback": "本地回环"
   }
 }

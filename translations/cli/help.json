@@ -15,6 +15,7 @@
     "Dev profile: isolate state under ~/.openclaw-dev, default gateway port 19001, and shift derived ports (browser/canvas)": "开发配置：在 ~/.openclaw-dev 下隔离状态，默认网关端口 19001，并移动派生端口（浏览器/画布）",
     "Use a named profile (isolates OPENCLAW_STATE_DIR/OPENCLAW_CONFIG_PATH under ~/.openclaw-<name>)": "使用命名配置文件（在 ~/.openclaw-<name> 下隔离状态和配置）",
     "Disable ANSI colors": "禁用 ANSI 颜色",
+    "-h, --help": "-h, --help",
     "Display help for command": "显示命令帮助",
     "Hint: commands suffixed with * have subcommands. Run <command> --help for details.": "提示：带 * 的命令包含子命令。运行 <command> --help 查看详情。",
     ".replace(/^Usage:/gm, theme.heading(\"Usage:\"))": ".replace(/^Usage:/gm, theme.heading(\"用法：\"))",

@@ -29,6 +29,20 @@
     "Override locale (CDP)": "覆盖 locale（CDP）",
     "Locale (e.g. en-US)": "Locale（例如 en-US）",
     "Apply a Playwright device descriptor (e.g. \"iPhone 14\")": "应用 Playwright 设备描述（例如 \"iPhone 14\"）",
-    "Device name (Playwright devices)": "设备名称（Playwright devices）"
+    "Device name (Playwright devices)": "设备名称（Playwright devices）",
+    "viewport set: ${width}x${height}": "viewport 已设置：${width}x${height}",
+    "Expected on|off": "期望值为 on|off",
+    "offline: ${offline}": "离线模式：${offline}",
+    "Missing headers JSON (pass --headers-json or positional JSON argument)": "缺少 headers JSON（请传入 --headers-json 或位置参数 JSON）",
+    "Headers JSON must be a JSON object": "Headers JSON 必须是 JSON 对象",
+    "headers set": "headers 已设置",
+    "credentials cleared": "凭据已清除",
+    "credentials set": "凭据已设置",
+    "geolocation cleared": "地理位置已清除",
+    "geolocation set": "地理位置已设置",
+    "media colorScheme: ${colorScheme}": "媒体 colorScheme：${colorScheme}",
+    "timezone: ${timezoneId}": "时区：${timezoneId}",
+    "locale: ${locale}": "locale：${locale}",
+    "device: ${name}": "设备：${name}"
   }
 }

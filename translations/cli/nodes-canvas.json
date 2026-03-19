@@ -25,6 +25,23 @@
     "Push A2UI JSONL to the canvas": "将 A2UI JSONL 推送到 canvas",
     "Path to JSONL payload": "JSONL payload 路径",
     "Render a quick A2UI text payload": "快速渲染 A2UI 文本 payload",
-    "Reset A2UI renderer state": "重置 A2UI 渲染器状态"
+    "Reset A2UI renderer state": "重置 A2UI 渲染器状态",
+    "canvas snapshot": "canvas 快照",
+    "invalid format: ${String(opts.format)} (expected png|jpg|jpeg)": "无效格式：${String(opts.format)}（期望 png|jpg|jpeg）",
+    "canvas present": "显示 canvas",
+    "canvas present ok": "已显示 canvas",
+    "canvas hide": "隐藏 canvas",
+    "canvas hide ok": "已隐藏 canvas",
+    "canvas navigate": "canvas 导航",
+    "canvas navigate ok": "canvas 导航完成",
+    "canvas eval": "canvas 执行",
+    "missing --js or <js>": "缺少 --js 或 <js>",
+    "canvas eval ok": "canvas 执行完成",
+    "canvas a2ui push": "canvas a2ui 推送",
+    "provide exactly one of --jsonl or --text": "必须且只能提供 --jsonl 或 --text 其中之一。",
+    "Detected A2UI v0.9 JSONL (createSurface). OpenClaw currently supports v0.8 only.": "检测到 A2UI v0.9 JSONL（createSurface）。OpenClaw 当前仅支持 v0.8。",
+    "canvas a2ui push ok (v0.8, ${messageCount} message${messageCount === 1 ? \"\" : \"s\"})": "canvas a2ui 推送完成（v0.8，${messageCount} 条消息）",
+    "canvas a2ui reset": "canvas a2ui 重置",
+    "canvas a2ui reset ok": "canvas a2ui 已重置"
   }
 }

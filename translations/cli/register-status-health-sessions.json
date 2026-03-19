@@ -38,6 +38,7 @@
     "Apply maintenance even when configured mode is warn": "即使配置模式为 warn 也执行维护",
     "Remove store entries whose transcript files are missing (bypasses age/count retention)": "移除 transcript 文件缺失的存储条目（绕过 age/count 保留策略）",
     "Protect this session key from budget-eviction": "保护此会话键不被预算驱逐",
+    "--timeout must be a positive integer (milliseconds)": "--timeout 必须是正整数（毫秒）",
     "Output JSON": "输出 JSON",
     "Preview stale/cap cleanup.": "预览陈旧/容量清理。",
     "Also preview pruning entries with missing transcript files.": "同时预览清理 transcript 文件缺失的条目。",

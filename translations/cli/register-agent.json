@@ -31,6 +31,8 @@
     "Include routing bindings": "包含路由绑定",
     "List routing bindings": "列出路由绑定",
     "Filter by agent id": "按 agent ID 过滤",
+    "-m, --message <text>": "-m, --message <text>",
+    "-t, --to <number>": "-t, --to <number>",
     "Add routing bindings for an agent": "为 agent 添加路由绑定",
     "Agent id (defaults to current default agent)": "Agent ID（默认当前默认 agent）",
     "Binding to add (repeatable). If omitted, accountId is resolved by channel defaults/hooks.": "要添加的绑定（可重复）。如省略，accountId 将通过渠道默认值/hooks 解析。",
@@ -58,6 +60,7 @@
     "Load from IDENTITY.md.": "从 IDENTITY.md 加载。",
     "Use a specific IDENTITY.md.": "使用指定的 IDENTITY.md。",
     "Delete an agent and prune workspace/state": "删除 agent 并清理工作区/状态",
-    "Skip confirmation": "跳过确认"
+    "Skip confirmation": "跳过确认",
+    "add [name]": "add [name]"
   }
 }

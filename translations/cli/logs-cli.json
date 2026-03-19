@@ -17,6 +17,7 @@
     "Hint: run \\`${formatCliCommand(\"openclaw doctor\")}\\`.": "提示：运行 \\`${formatCliCommand(\"openclaw doctor\")}\\`。",
     "Log tail truncated (increase --max-bytes).": "日志尾部已截断（请增大 --max-bytes）。",
     "Log cursor reset (file rotated).": "日志游标已重置（文件已轮转）。",
-    "Log file:": "日志文件："
+    "Log file:": "日志文件：",
+    "Unexpected logs.tail response": "logs.tail 响应异常"
   }
 }

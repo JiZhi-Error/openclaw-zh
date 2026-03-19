@@ -1,0 +1,18 @@
+{
+  "file": "src/cli/daemon-cli/lifecycle-core.ts",
+  "description": "gateway/node 服务生命周期公共输出",
+  "replacements": {
+    "${params.serviceNoun} service ${params.service.notLoadedText}.": "${params.serviceNoun} 服务${params.service.notLoadedText}。",
+    "Start with: ${hint}": "请使用以下命令启动：${hint}",
+    "Unknown validation issue.": "未知校验问题。",
+    "Nix mode detected; service uninstall is disabled.": "检测到 Nix 模式；服务卸载已禁用。",
+    "${params.serviceNoun} uninstall failed: ${String(err)}": "${params.serviceNoun} 卸载失败：${String(err)}",
+    "${params.serviceNoun} service still loaded after uninstall.": "${params.serviceNoun} 在卸载后仍处于已加载状态。",
+    "${params.serviceNoun} service check failed: ${String(err)}": "${params.serviceNoun} 服务检查失败：${String(err)}",
+    "${params.serviceNoun} aborted: config is invalid.\\n${configError}\\nFix the config and retry, or run \"openclaw doctor\" to repair.": "${params.serviceNoun} 已中止：配置无效。\\n${configError}\\n请修复配置后重试，或运行 \"openclaw doctor\" 进行修复。",
+    "${params.serviceNoun} start failed: ${String(err)}": "${params.serviceNoun} 启动失败：${String(err)}",
+    "${params.serviceNoun} stop failed: ${String(err)}": "${params.serviceNoun} 停止失败：${String(err)}",
+    "${params.serviceNoun} restart failed: ${String(err)}": "${params.serviceNoun} 重启失败：${String(err)}",
+    "Unable to verify gateway token drift: gateway.auth.token SecretRef is configured but unavailable in this command path.": "无法校验 gateway token 漂移：gateway.auth.token SecretRef 已配置，但在当前命令路径下不可用。"
+  }
+}

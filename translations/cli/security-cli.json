@@ -27,6 +27,16 @@
     "CRITICAL": "严重",
     "WARN": "警告",
     "INFO": "信息",
-    "Fix: ${f.remediation.trim()}": "修复：${f.remediation.trim()}"
+    "Fix: ${f.remediation.trim()}": "修复：${f.remediation.trim()}",
+    "${c} critical": "${c} 个严重问题",
+    "${w} warn": "${w} 个警告",
+    "${i} info": "${i} 条信息",
+    "security audit": "安全审计",
+    "chmod ${mode} ${shortenHomePath(action.path)}": "chmod ${mode} ${shortenHomePath(action.path)}",
+    "skip chmod ${mode} ${shortenHomePath(action.path)} (${action.skipped})": "跳过 chmod ${mode} ${shortenHomePath(action.path)}（${action.skipped}）",
+    "chmod ${mode} ${shortenHomePath(action.path)} failed: ${action.error}": "chmod ${mode} ${shortenHomePath(action.path)} 失败：${action.error}",
+    "skip ${command} (${action.skipped})": "跳过 ${command}（${action.skipped}）",
+    "${command} failed: ${action.error}": "${command} 失败：${action.error}",
+    "error: ${shortenHomeInString(err)}": "错误：${shortenHomeInString(err)}"
   }
 }

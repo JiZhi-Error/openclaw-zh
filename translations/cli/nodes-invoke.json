@@ -18,6 +18,19 @@
     "Command timeout (ms)": "命令超时（毫秒）",
     "Require screen recording permission": "要求屏幕录制权限",
     "Node invoke timeout in ms (default 30000)": "节点调用超时（毫秒，默认 30000）",
-    "Command and args": "命令及参数"
+    "Command and args": "命令及参数",
+    "invalid system.run.prepare response": "无效的 system.run.prepare 响应",
+    "invalid --security (use deny|allowlist|full)": "无效的 --security（请使用 deny|allowlist|full）",
+    "invalid --ask (use off|on-miss|always)": "无效的 --ask（请使用 off|on-miss|always）",
+    "exec approvals unavailable": "执行审批不可用",
+    "exec denied: user denied": "执行被拒绝：用户拒绝了审批",
+    "exec denied: approval required (approval UI not available)": "执行被拒绝：需要审批，但审批 UI 不可用",
+    "--node and --command required": "--node 和 --command 为必填项",
+    "use --raw or argv, not both": "请使用 --raw 或 argv，不能同时使用。",
+    "command required": "必须提供命令。",
+    "node required (set --node or tools.exec.node)": "必须提供节点（设置 --node 或 tools.exec.node）。",
+    "exec denied: host=node security=deny": "执行被拒绝：host=node security=deny",
+    "run timed out": "运行超时",
+    "run exit ${exitCode}": "运行退出码 ${exitCode}"
   }
 }

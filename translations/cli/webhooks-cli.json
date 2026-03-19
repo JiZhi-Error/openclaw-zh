@@ -17,6 +17,7 @@
     "gog watch serve bind host": "gog watch serve 绑定主机",
     "gog watch serve port": "gog watch serve 端口",
     "gog watch serve path": "gog watch serve 路径",
+    "--account is required": "--account 为必填项",
     "Include email body snippets": "包含邮件正文摘要",
     "Max bytes for body snippets": "正文摘要的最大字节数",
     "Renew watch every N minutes": "每 N 分钟续期 watch",

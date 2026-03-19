@@ -6,6 +6,10 @@
     "Node id, name, or IP": "节点 ID、名称或 IP",
     "Push title": "推送标题",
     "Push body": "推送正文",
-    "Override APNs environment": "覆盖 APNs 环境"
+    "Override APNs environment": "覆盖 APNs 环境",
+    "Push test for node ${nodeId}": "为节点 ${nodeId} 发送推送测试",
+    "invalid --environment (use sandbox|production)": "无效的 --environment 值（请使用 sandbox|production）",
+    "push.test status=${status} ok=${ok} env=${env}": "push.test 状态=${status} ok=${ok} 环境=${env}",
+    "reason: ${reason}": "原因：${reason}"
   }
 }

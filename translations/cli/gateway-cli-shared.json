@@ -1,0 +1,13 @@
+{
+  "file": "src/cli/gateway-cli/shared.ts",
+  "description": "gateway 共享错误与服务停止提示",
+  "replacements": {
+    "Unknown error": "未知错误",
+    "Tip: ${formatCliCommand(\"openclaw gateway stop\")}": "提示：${formatCliCommand(\"openclaw gateway stop\")}",
+    "Or: launchctl bootout gui/$UID/${resolveGatewayLaunchAgentLabel(profile)}": "或者：launchctl bootout gui/$UID/${resolveGatewayLaunchAgentLabel(profile)}",
+    "Or: systemctl --user stop ${resolveGatewaySystemdServiceName(profile)}.service": "或者：systemctl --user stop ${resolveGatewaySystemdServiceName(profile)}.service",
+    "Or: schtasks /End /TN \"${resolveGatewayWindowsTaskName(profile)}\"": "或者：schtasks /End /TN \"${resolveGatewayWindowsTaskName(profile)}\"",
+    "Gateway service appears ${service.loadedText}. Stop it first.": "网关服务似乎${service.loadedText}。请先停止它。",
+    "Gateway service status unknown; if supervised, stop it first.": "网关服务状态未知；如果它由服务管理器监管，请先停止它。"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "file": "src/cli/node-cli/daemon.ts",
+  "description": "node 守护进程命令输出",
+  "replacements": {
+    "Invalid port": "无效端口",
+    "Invalid --runtime (use \"node\" or \"bun\")": "无效的 --runtime 值（请使用 \"node\" 或 \"bun\"）",
+    "Node service check failed: ${String(err)}": "节点服务检查失败：${String(err)}",
+    "Node service already ${service.loadedText}.": "节点服务已${service.loadedText}。",
+    "Reinstall with: ${formatCliCommand(\"openclaw node install --force\")}": "重新安装请使用：${formatCliCommand(\"openclaw node install --force\")}",
+    "Service:": "服务：",
+    "Command:": "命令：",
+    "Service file:": "服务文件：",
+    "Working dir:": "工作目录：",
+    "Runtime:": "运行时：",
+    "Start with:": "请使用以下命令启动：",
+    "Service unit not found.": "未找到服务单元。",
+    "Service is loaded but not running.": "服务已加载，但未在运行。"
+  }
+}

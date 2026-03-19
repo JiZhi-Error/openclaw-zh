@@ -1,0 +1,16 @@
+{
+  "file": "src/cli/nodes-cli/rpc.ts",
+  "description": "nodes RPC 公共选项与授权提示",
+  "replacements": {
+    "Gateway WebSocket URL (defaults to gateway.remote.url when configured)": "网关 WebSocket URL（已配置时默认使用 gateway.remote.url）",
+    "Gateway token (if required)": "网关令牌（如需要）",
+    "Timeout in ms": "超时时间（毫秒）",
+    "Output JSON": "输出 JSON",
+    "Nodes ${method}": "节点 ${method}",
+    "peekaboo bridge rejected the client.": "peekaboo bridge 拒绝了该客户端。",
+    "sign the peekaboo CLI (TeamID Y5PE65HELJ) or launch the host with": "请为 peekaboo CLI 签名（TeamID Y5PE65HELJ），或使用以下方式启动宿主：",
+    "PEEKABOO_ALLOW_UNSIGNED_SOCKET_CLIENTS=1 for local dev.": "本地开发时设置 PEEKABOO_ALLOW_UNSIGNED_SOCKET_CLIENTS=1。",
+    "bridge client is not authorized": "bridge 客户端未获授权",
+    "unsigned bridge clients are not allowed": "不允许未签名的 bridge 客户端"
+  }
+}

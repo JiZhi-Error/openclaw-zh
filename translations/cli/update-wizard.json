@@ -1,0 +1,19 @@
+{
+  "file": "src/cli/update-cli/wizard.ts",
+  "description": "update 交互式向导",
+  "replacements": {
+    "Update wizard requires a TTY. Use `openclaw update --channel <stable|beta|dev>` instead.": "更新向导需要 TTY。请改用 `openclaw update --channel <stable|beta|dev>`。",
+    "Update channel": "更新通道",
+    "Keep current (${channelInfo.channel})": "保持当前（${channelInfo.channel}）",
+    "Stable": "稳定版",
+    "Tagged releases (npm latest)": "已打标签的正式发布（npm latest）",
+    "Beta": "测试版",
+    "Prereleases (npm beta)": "预发布版本（npm beta）",
+    "Dev": "开发版",
+    "Git main": "Git main",
+    "Update cancelled.": "已取消更新。",
+    "OPENCLAW_GIT_DIR points at a non-git directory: ${gitDir}. Set OPENCLAW_GIT_DIR to an empty folder or an openclaw checkout.": "OPENCLAW_GIT_DIR 指向了一个非 git 目录：${gitDir}。请将 OPENCLAW_GIT_DIR 设为一个空文件夹或 openclaw 检出目录。",
+    "Create a git checkout at ${gitDir}? (override via OPENCLAW_GIT_DIR)": "要在 ${gitDir} 创建一个 git 检出吗？（可通过 OPENCLAW_GIT_DIR 覆盖）",
+    "Restart the gateway service after update?": "更新后是否重启网关服务？"
+  }
+}

@@ -13,6 +13,7 @@
     "No MCP servers configured in ${loaded.path}.": "${loaded.path} 中未配置 MCP 服务器。",
     "MCP servers (${loaded.path}):": "MCP 服务器（${loaded.path}）：",
     "No MCP server named \"${name}\" in ${loaded.path}.": "${loaded.path} 中没有名为“${name}”的 MCP 服务器。",
+    "No MCP server named \"${name}\" in ${result.path}.": "${result.path} 中没有名为“${name}”的 MCP 服务器。",
     "MCP server \"${name}\" (${loaded.path}):": "MCP 服务器“${name}”（${loaded.path}）：",
     "Saved MCP server \"${name}\" to ${result.path}.": "已将 MCP 服务器“${name}”保存到 ${result.path}。",
     "Removed MCP server \"${name}\" from ${result.path}.": "已从 ${result.path} 移除 MCP 服务器“${name}”。"
