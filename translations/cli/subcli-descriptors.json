@@ -2,7 +2,7 @@
   "file": "src/cli/program/subcli-descriptors.ts",
   "description": "CLI 子命令描述符",
   "replacements": {
-    "description: \"Agent Control Protocol tools\"": "description: \"Agent Control Protocol 工具\"",
+    "description: \"Agent Control Protocol tools\"": "description: \"Agent Control Protocol (ACP) 工具\"",
     "description: \"Run, inspect, and query the WebSocket Gateway\"": "description: \"运行、检查和查询 WebSocket 网关\"",
     "description: \"Gateway service (legacy alias)\"": "description: \"网关服务（旧版别名）\"",
     "description: \"Tail gateway file logs via RPC\"": "description: \"通过 RPC 查看网关日志\"",

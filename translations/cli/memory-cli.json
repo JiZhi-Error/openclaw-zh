@@ -1,0 +1,30 @@
+{
+  "file": "src/cli/memory-cli.ts",
+  "description": "记忆 CLI 命令帮助",
+  "replacements": {
+    "Search, inspect, and reindex memory files": "搜索、检查并重建记忆文件索引",
+    "Examples:": "示例：",
+    "Show index and provider status.": "显示索引和提供商状态。",
+    "Probe embedding provider readiness.": "探测 embedding 提供商是否就绪。",
+    "Force a full reindex.": "强制执行完整重建索引。",
+    "Quick search using positional query.": "使用位置参数快速搜索。",
+    "Limit results for focused troubleshooting.": "限制结果数量，以便聚焦排障。",
+    "Output machine-readable JSON (good for scripts).": "输出机器可读的 JSON（适合脚本使用）。",
+    "Docs:": "文档：",
+    "Show memory search index status": "显示记忆搜索索引状态",
+    "Agent id (default: default agent)": "代理 ID（默认：默认代理）",
+    "Print JSON": "输出 JSON",
+    "Probe embedding provider availability": "探测 embedding 提供商可用性",
+    "Reindex if dirty (implies --deep)": "若索引已脏则重建（隐含 --deep）",
+    "Verbose logging": "详细日志",
+    "Reindex memory files": "重建记忆文件索引",
+    "Force full reindex": "强制完整重建索引",
+    "Search memory files": "搜索记忆文件",
+    "Search query": "搜索查询",
+    "Search query (alternative to positional argument)": "搜索查询（位置参数的替代写法）",
+    "Max results": "最大结果数",
+    "Minimum score": "最低分数",
+    "Missing search query. Provide a positional query or use --query <text>.": "缺少搜索查询。请提供位置参数查询，或使用 --query <text>。",
+    "No matches.": "没有匹配结果。"
+  }
+}

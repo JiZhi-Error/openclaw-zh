@@ -2,7 +2,7 @@
   "file": "src/cli/program/register.subclis.ts",
   "description": "CLI 子命令列表说明",
   "replacements": {
-    "Agent Control Protocol tools": "Agent Control Protocol 工具",
+    "Agent Control Protocol tools": "Agent Control Protocol (ACP) 工具",
     "Run, inspect, and query the WebSocket Gateway": "运行、检查和查询 WebSocket 网关",
     "Gateway service (legacy alias)": "网关服务（旧版别名）",
     "Tail gateway file logs via RPC": "通过 RPC 查看网关日志",

@@ -1,0 +1,29 @@
+{
+  "file": "src/cli/acp-cli.ts",
+  "description": "ACP CLI 命令帮助",
+  "replacements": {
+    "Run an ACP bridge backed by the Gateway": "运行由网关支持的 ACP 桥接服务",
+    "Gateway WebSocket URL (defaults to gateway.remote.url when configured)": "网关 WebSocket URL（已配置时默认使用 gateway.remote.url）",
+    "Gateway token (if required)": "网关令牌（如需要）",
+    "Read gateway token from file": "从文件读取网关令牌",
+    "Gateway password (if required)": "网关密码（如需要）",
+    "Read gateway password from file": "从文件读取网关密码",
+    "Default session key (e.g. agent:main:main)": "默认会话键（例如 agent:main:main）",
+    "Default session label to resolve": "要解析的默认会话标签",
+    "Fail if the session key/label does not exist": "如果会话键/标签不存在则失败",
+    "Reset the session key before first use": "首次使用前重置会话键",
+    "Do not prefix prompts with the working directory": "不要在提示前加上工作目录前缀",
+    "ACP provenance mode: off, meta, or meta+receipt": "ACP 来源模式：off、meta 或 meta+receipt",
+    "Verbose logging to stderr": "将详细日志输出到 stderr",
+    "Docs:": "文档：",
+    "Use either ${params.directFlag} or ${params.fileFlag} for ${params.label}.": "${params.label} 只能使用 ${params.directFlag} 或 ${params.fileFlag} 其中之一。",
+    "Warning: ${flag} can be exposed via process listings. Prefer ${flag}-file or environment variables.": "警告：${flag} 可能会在进程列表中暴露。建议优先使用 ${flag}-file 或环境变量。",
+    "Invalid --provenance value. Use off, meta, or meta+receipt.": "无效的 --provenance 值。请使用 off、meta 或 meta+receipt。",
+    "Run an interactive ACP client against the local ACP bridge": "针对本地 ACP 桥接服务运行交互式 ACP 客户端",
+    "Working directory for the ACP session": "ACP 会话的工作目录",
+    "ACP server command (default: openclaw)": "ACP 服务器命令（默认：openclaw）",
+    "Extra arguments for the ACP server": "ACP 服务器的额外参数",
+    "Enable verbose logging on the ACP server": "在 ACP 服务器上启用详细日志",
+    "Verbose client logging": "详细客户端日志"
+  }
+}

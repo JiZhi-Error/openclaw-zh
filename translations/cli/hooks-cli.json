@@ -1,0 +1,28 @@
+{
+  "file": "src/cli/hooks-cli.ts",
+  "description": "Hooks CLI 命令帮助",
+  "replacements": {
+    "Manage internal agent hooks": "管理内部代理 Hooks",
+    "Docs:": "文档：",
+    "List all hooks": "列出所有 Hooks",
+    "Show only eligible hooks": "仅显示满足条件的 Hooks",
+    "Output as JSON": "输出为 JSON",
+    "Show more details including missing requirements": "显示更多细节，包括缺失的要求",
+    "Show detailed information about a hook": "显示某个 Hook 的详细信息",
+    "Check hooks eligibility status": "检查 Hooks 的可用状态",
+    "Enable a hook": "启用 Hook",
+    "Disable a hook": "禁用 Hook",
+    "Install a hook pack (path, archive, or npm spec)": "安装 Hook 包（路径、归档或 npm 规格）",
+    "Path to a hook pack or npm package spec": "Hook 包路径或 npm 包规格",
+    "Link a local path instead of copying": "链接本地路径而不是复制",
+    "Record npm installs as exact resolved <name>@<version>": "将 npm 安装记录为精确解析后的 <name>@<version>",
+    "Update installed hooks (npm installs only)": "更新已安装的 Hooks（仅 npm 安装）",
+    "Hook pack id (omit with --all)": "Hook 包 ID（与 --all 一起使用时可省略）",
+    "Update all tracked hooks": "更新所有已跟踪的 Hooks",
+    "Show what would change without writing": "显示将发生的更改但不写入",
+    "No hooks found.": "未找到 Hooks。",
+    "No eligible hooks found. Run \\`${formatCliCommand(\"openclaw hooks list\")}\\` to see all hooks.": "未找到满足条件的 Hooks。请运行 \\`${formatCliCommand(\"openclaw hooks list\")}\\` 查看全部 Hooks。",
+    "Hook \"${hookName}\" not found. Run \\`${formatCliCommand(\"openclaw hooks list\")}\\` to see available hooks.": "未找到 Hook“${hookName}”。请运行 \\`${formatCliCommand(\"openclaw hooks list\")}\\` 查看可用 Hooks。",
+    "Provide a hook id or use --all.": "请提供 Hook ID，或使用 --all。"
+  }
+}

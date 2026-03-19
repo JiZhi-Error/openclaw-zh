@@ -20,12 +20,18 @@
       "cli/register-maintenance.json",
       "cli/register-message.json",
       "cli/register-onboard.json",
+      "cli/acp-cli.json",
+      "cli/channels-cli.json",
       "cli/completion-cli.json",
+      "cli/directory-cli.json",
+      "cli/hooks-cli.json",
       "cli/mcp-cli.json",
+      "cli/memory-cli.json",
       "cli/system-cli.json",
       "cli/devices-cli.json",
       "cli/config-cli.json",
-      "cli/secrets-cli.json"
+      "cli/secrets-cli.json",
+      "cli/plugins-cli.json"
     ],
     "wizard": [
       "wizard/onboarding.json",
