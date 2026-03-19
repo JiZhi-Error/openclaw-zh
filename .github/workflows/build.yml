@@ -117,12 +117,9 @@ jobs:
             url: "https://github.com/JiZhi-Error/openclaw-zh/issues",
           };
           pkg.bin = {
-            "openclaw-zh": "openclaw-zh.mjs",
+            "openclaw": "openclaw.mjs",
+            "openclaw-zh": "openclaw.mjs",
           };
-
-          if (pkg.exports && pkg.exports["./cli-entry"]) {
-            pkg.exports["./cli-entry"] = "./openclaw-zh.mjs";
-          }
 
           if (Array.isArray(pkg.files)) {
             const files = new Set(pkg.files);
@@ -132,10 +129,11 @@ jobs:
 
           fs.writeFileSync(pkgPath, `${JSON.stringify(pkg, null, 2)}\n`, "utf8");
 
-          const bootstrap = fs
-            .readFileSync("openclaw.mjs", "utf8")
-            .replaceAll("openclaw:", "openclaw-zh:");
-          fs.writeFileSync("openclaw-zh.mjs", bootstrap, "utf8");
+          fs.writeFileSync(
+            "openclaw-zh.mjs",
+            '#!/usr/bin/env node\nimport "./openclaw.mjs";\n',
+            "utf8",
+          );
           EOF
 
       - name: Archive build output

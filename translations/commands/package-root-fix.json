@@ -1,0 +1,7 @@
+{
+  "file": "src/infra/openclaw-root.ts",
+  "description": "允许 openclaw-zh 作为核心包名被识别",
+  "replacements": {
+    "new Set([\"openclaw\"])": "new Set([\"openclaw\", \"openclaw-zh\"])"
+  }
+}

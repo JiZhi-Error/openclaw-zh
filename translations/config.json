@@ -55,6 +55,7 @@
       "commands/plugin-install.json",
       "commands/channels.json",
       "commands/uninstall.json",
+      "commands/package-root-fix.json",
       "commands/model-picker.json",
       "commands/auth-choice-apply-helpers.json",
       "commands/provider-auth-input.json",
