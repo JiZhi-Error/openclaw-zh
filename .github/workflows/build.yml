@@ -96,46 +96,6 @@ jobs:
         working-directory: openclaw
         run: pnpm ui:build
 
-      - name: Rename packaged app to openclaw-zh
-        working-directory: openclaw
-        shell: bash
-        run: |
-          node --input-type=module <<'EOF'
-          import fs from "node:fs";
-
-          const pkgPath = "package.json";
-          const pkg = JSON.parse(fs.readFileSync(pkgPath, "utf8"));
-
-          pkg.name = "openclaw-zh";
-          pkg.description = "Simplified Chinese build of OpenClaw";
-          pkg.homepage = "https://github.com/JiZhi-Error/openclaw-zh";
-          pkg.repository = {
-            type: "git",
-            url: "git+https://github.com/JiZhi-Error/openclaw-zh.git",
-          };
-          pkg.bugs = {
-            url: "https://github.com/JiZhi-Error/openclaw-zh/issues",
-          };
-          pkg.bin = {
-            "openclaw": "openclaw.mjs",
-            "openclaw-zh": "openclaw.mjs",
-          };
-
-          if (Array.isArray(pkg.files)) {
-            const files = new Set(pkg.files);
-            files.add("openclaw-zh.mjs");
-            pkg.files = [...files];
-          }
-
-          fs.writeFileSync(pkgPath, `${JSON.stringify(pkg, null, 2)}\n`, "utf8");
-
-          fs.writeFileSync(
-            "openclaw-zh.mjs",
-            '#!/usr/bin/env node\nimport "./openclaw.mjs";\n',
-            "utf8",
-          );
-          EOF
-
       - name: Archive build output
         run: |
           tar \
@@ -164,4 +124,5 @@ jobs:
             echo "| Applied replacements | ${{ steps.apply.outputs.applied }} |"
             echo "| Already present | ${{ steps.apply.outputs.existed }} |"
             echo "| Unmatched | ${{ steps.apply.outputs.failed }} |"
+            echo "| Runtime package name | openclaw |"
           } >> "$GITHUB_STEP_SUMMARY"

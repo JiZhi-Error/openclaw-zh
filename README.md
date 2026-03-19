@@ -41,6 +41,8 @@ openclaw-zh status
 openclaw-zh apply --dry-run --target=./openclaw
 openclaw-zh verify --target=./openclaw
 
+编译后的 OpenClaw 运行时名称保持官方默认值 `openclaw`，本项目只负责汉化补丁，不再改写上游包名或启动入口。
+
 npm run status
 npm run apply -- --dry-run
 npm run apply -- --target=./openclaw
