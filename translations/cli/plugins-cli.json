@@ -121,7 +121,7 @@
     "Continue updating \"${drift.pluginId}\" with this artifact?": "要继续使用此构件更新 \"${drift.pluginId}\" 吗？",
     "Plugin errors:": "插件错误：",
     "${entry.id}: ${entry.error ?? \"failed to load\"} (${entry.source})": "${entry.id}：${entry.error ?? \"加载失败\"}（${entry.source}）",
-    "Compatibility:": "兼容性：",
+    "theme.warn(\"Compatibility:\")": "theme.warn(\"兼容性：\")",
     "No plugins found in marketplace ${result.sourceLabel}.": "在 marketplace ${result.sourceLabel} 中未找到插件。"
   }
 }
