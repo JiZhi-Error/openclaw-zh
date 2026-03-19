@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 env:
   NODE_VERSION: "24.x"
@@ -97,19 +97,94 @@ jobs:
         run: pnpm ui:build
 
       - name: Archive build output
+        id: package
+        shell: bash
         run: |
+          ARCHIVE_NAME="openclaw-zh-build-${{ steps.upstream.outputs.version }}-${{ steps.upstream.outputs.sha }}.tgz"
           tar \
             --exclude='./node_modules' \
             --exclude='./.git' \
-            -czf "openclaw-zh-build-${{ github.sha }}.tgz" \
+            -czf "$ARCHIVE_NAME" \
             -C openclaw .
+          echo "archive_name=$ARCHIVE_NAME" >> "$GITHUB_OUTPUT"
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: openclaw-zh-build-${{ steps.upstream.outputs.version }}-${{ steps.upstream.outputs.sha }}
-          path: openclaw-zh-build-${{ github.sha }}.tgz
+          path: ${{ steps.package.outputs.archive_name }}
           retention-days: 7
+
+      - name: Determine release channel
+        if: github.event_name != 'pull_request'
+        id: release_meta
+        uses: actions/github-script@v7
+        env:
+          UPSTREAM_VERSION: ${{ steps.upstream.outputs.version }}
+        with:
+          script: |
+            const stableTag = `v${process.env.UPSTREAM_VERSION}`;
+            const prereleaseTag = `pre-v${process.env.UPSTREAM_VERSION}-run${context.runId}-${process.env.GITHUB_RUN_ATTEMPT}`;
+
+            let releaseKind = "release";
+            try {
+              await github.rest.repos.getReleaseByTag({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                tag: stableTag,
+              });
+              releaseKind = "prerelease";
+            } catch (error) {
+              if (error.status !== 404) {
+                throw error;
+              }
+            }
+
+            core.setOutput("kind", releaseKind);
+            core.setOutput("stable_tag", stableTag);
+            core.setOutput("prerelease_tag", prereleaseTag);
+
+      - name: Publish GitHub release
+        if: github.event_name != 'pull_request'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_KIND: ${{ steps.release_meta.outputs.kind }}
+          STABLE_TAG: ${{ steps.release_meta.outputs.stable_tag }}
+          PRERELEASE_TAG: ${{ steps.release_meta.outputs.prerelease_tag }}
+          ARCHIVE_NAME: ${{ steps.package.outputs.archive_name }}
+          UPSTREAM_VERSION: ${{ steps.upstream.outputs.version }}
+          UPSTREAM_SHA: ${{ steps.upstream.outputs.sha }}
+        run: |
+          NOTES_FILE="$(mktemp)"
+          {
+            echo "OpenClaw 简体中文语言包自动构建"
+            echo ""
+            echo "- Upstream version: ${UPSTREAM_VERSION}"
+            echo "- Upstream commit: ${UPSTREAM_SHA}"
+            echo "- Patch commit: ${GITHUB_SHA}"
+            echo "- Applied replacements: ${{ steps.apply.outputs.applied }}"
+            echo "- Already present: ${{ steps.apply.outputs.existed }}"
+            echo "- Artifact: ${ARCHIVE_NAME}"
+          } > "$NOTES_FILE"
+
+          if [ "$RELEASE_KIND" = "release" ]; then
+            gh release create "$STABLE_TAG" "$ARCHIVE_NAME" \
+              --title "OpenClaw ZH v${UPSTREAM_VERSION}" \
+              --notes-file "$NOTES_FILE" \
+              --target "$GITHUB_SHA" \
+              --latest
+            echo "release_label=Release" >> "$GITHUB_ENV"
+            echo "release_tag=$STABLE_TAG" >> "$GITHUB_ENV"
+          else
+            gh release create "$PRERELEASE_TAG" "$ARCHIVE_NAME" \
+              --title "OpenClaw ZH Pre-release v${UPSTREAM_VERSION} (${UPSTREAM_SHA})" \
+              --notes-file "$NOTES_FILE" \
+              --target "$GITHUB_SHA" \
+              --prerelease
+            echo "release_label=Pre-release" >> "$GITHUB_ENV"
+            echo "release_tag=$PRERELEASE_TAG" >> "$GITHUB_ENV"
+          fi
 
       - name: Build summary
         run: |
@@ -125,4 +200,8 @@ jobs:
             echo "| Already present | ${{ steps.apply.outputs.existed }} |"
             echo "| Unmatched | ${{ steps.apply.outputs.failed }} |"
             echo "| Runtime package name | openclaw |"
+            if [ "${{ github.event_name }}" != "pull_request" ]; then
+              echo "| Release channel | ${release_label:-not-created} |"
+              echo "| Release tag | ${release_tag:-n/a} |"
+            fi
           } >> "$GITHUB_STEP_SUMMARY"
