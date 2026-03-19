@@ -217,7 +217,8 @@ jobs:
               --title "OpenClaw ZH Pre-release v${UPSTREAM_VERSION} (${UPSTREAM_SHA})" \
               --notes-file "$NOTES_FILE" \
               --target "$GITHUB_SHA" \
-              --prerelease
+              --prerelease \
+              --latest
             echo "release_label=Pre-release" >> "$GITHUB_ENV"
             echo "release_tag=$PRERELEASE_TAG" >> "$GITHUB_ENV"
           fi
