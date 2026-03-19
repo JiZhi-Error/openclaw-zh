@@ -1,0 +1,28 @@
+{
+  "file": "src/cli/devices-cli.ts",
+  "description": "设备命令帮助",
+  "replacements": {
+    "Device pairing and auth tokens": "设备配对与认证令牌",
+    "List pending and paired devices": "列出待处理和已配对设备",
+    "Remove a paired device entry": "删除已配对设备条目",
+    "Clear paired devices from the gateway table": "从网关表中清空已配对设备",
+    "Also reject all pending pairing requests": "同时拒绝所有待处理的配对请求",
+    "Confirm destructive clear": "确认执行清空",
+    "Approve a pending device pairing request": "批准待处理的设备配对请求",
+    "Approve the most recent pending request": "批准最新的待处理请求",
+    "Reject a pending device pairing request": "拒绝待处理的设备配对请求",
+    "Rotate a device token for a role": "为角色轮换设备令牌",
+    "Revoke a device token for a role": "吊销角色的设备令牌",
+    "Pending": "待处理",
+    "Paired": "已配对",
+    "Request": "请求",
+    "Device": "设备",
+    "Role": "角色",
+    "IP": "IP",
+    "Age": "时长",
+    "Flags": "标记",
+    "Roles": "角色",
+    "Scopes": "范围",
+    "Tokens": "令牌"
+  }
+}

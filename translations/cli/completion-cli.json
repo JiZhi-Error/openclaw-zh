@@ -1,0 +1,12 @@
+{
+  "file": "src/cli/completion-cli.ts",
+  "description": "补全命令帮助",
+  "replacements": {
+    "Generate shell completion script": "生成 Shell 补全脚本",
+    "Docs:": "文档：",
+    "Shell to generate completion for (default: zsh)": "要生成补全的 Shell（默认：zsh）",
+    "Install completion script to shell profile": "将补全脚本安装到 Shell 配置文件",
+    "Write completion scripts to $OPENCLAW_STATE_DIR/completions (no stdout)": "将补全脚本写入 $OPENCLAW_STATE_DIR/completions（不输出到 stdout）",
+    "Skip confirmation (non-interactive)": "跳过确认（非交互）"
+  }
+}

@@ -2,11 +2,15 @@
   "file": "src/cli/program/register.subclis.ts",
   "description": "CLI 子命令列表说明",
   "replacements": {
+    "Agent Control Protocol tools": "Agent Control Protocol 工具",
     "Run, inspect, and query the WebSocket Gateway": "运行、检查和查询 WebSocket 网关",
+    "Gateway service (legacy alias)": "网关服务（旧版别名）",
     "Tail gateway file logs via RPC": "通过 RPC 查看网关日志",
+    "System events, heartbeat, and presence": "系统事件、心跳与在线状态",
     "Discover, scan, and configure models": "发现、扫描和配置模型",
     "Manage exec approvals (gateway or node host)": "管理执行审批（网关或节点主机）",
     "Manage gateway-owned node pairing and node commands": "管理网关节点配对和节点命令",
+    "Device pairing + token management": "设备配对与令牌管理",
     "Run and manage the headless node host service": "运行和管理无头节点主机服务",
     "Manage sandbox containers for agent isolation": "管理沙箱容器以隔离代理",
     "Open a terminal UI connected to the Gateway": "打开连接到网关的终端界面",
@@ -22,7 +26,9 @@
     "Manage connected chat channels (Telegram, Discord, etc.)": "管理已连接的聊天渠道（Telegram、Discord 等）",
     "Lookup contact and group IDs (self, peers, groups) for supported chat channels": "查询支持渠道的联系人和群组 ID",
     "Security tools and local config audits": "安全工具和本地配置审计",
+    "Secrets runtime reload controls": "密钥运行时重载控制",
     "List and inspect available skills": "列出和检查可用技能",
-    "Update OpenClaw and inspect update channel status": "更新 OpenClaw 并检查更新渠道状态"
+    "Update OpenClaw and inspect update channel status": "更新 OpenClaw 并检查更新渠道状态",
+    "Generate shell completion script": "生成 Shell 补全脚本"
   }
 }

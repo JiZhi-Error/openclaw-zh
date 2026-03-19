@@ -1,0 +1,14 @@
+{
+  "file": "src/cli/mcp-cli.ts",
+  "description": "MCP 命令帮助",
+  "replacements": {
+    "Manage OpenClaw MCP server config": "管理 OpenClaw MCP 服务器配置",
+    "List configured MCP servers": "列出已配置的 MCP 服务器",
+    "Print JSON": "输出 JSON",
+    "Show one configured MCP server or the full MCP config": "显示单个已配置的 MCP 服务器或完整 MCP 配置",
+    "MCP server name": "MCP 服务器名称",
+    "Set one configured MCP server from a JSON object": "使用 JSON 对象设置一个已配置的 MCP 服务器",
+    "JSON object, for example {\"command\":\"uvx\",\"args\":[\"context7-mcp\"]}": "JSON 对象，例如 {\"command\":\"uvx\",\"args\":[\"context7-mcp\"]}",
+    "Remove one configured MCP server": "删除一个已配置的 MCP 服务器"
+  }
+}

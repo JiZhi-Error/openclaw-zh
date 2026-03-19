@@ -1,0 +1,24 @@
+{
+  "file": "src/cli/program/register.backup.ts",
+  "description": "备份命令帮助",
+  "replacements": {
+    "Create and verify local backup archives for OpenClaw state": "为 OpenClaw 状态创建并验证本地备份归档",
+    "Write a backup archive for config, credentials, sessions, and workspaces": "为配置、凭据、会话和工作区写入备份归档",
+    "Archive path or destination directory": "归档路径或目标目录",
+    "Output JSON": "输出 JSON",
+    "Print the backup plan without writing the archive": "打印备份计划但不写入归档",
+    "Verify the archive after writing it": "写入后验证归档",
+    "Back up only the active JSON config file": "仅备份当前活动的 JSON 配置文件",
+    "Exclude workspace directories from the backup": "从备份中排除工作区目录",
+    "Create a timestamped backup in the current directory.": "在当前目录创建带时间戳的备份。",
+    "Write the archive into an existing backup directory.": "将归档写入现有备份目录。",
+    "Preview the archive plan without writing any files.": "预览归档计划但不写入任何文件。",
+    "Create the archive and immediately validate its manifest and payload layout.": "创建归档并立即验证其清单与内容布局。",
+    "Back up state/config without agent workspace files.": "备份状态和配置，但不包含代理工作区文件。",
+    "Validate a backup archive and its embedded manifest": "验证备份归档及其内嵌清单",
+    "Check that the archive structure and manifest are intact.": "检查归档结构和清单是否完好。",
+    "Emit machine-readable verification output.": "输出机器可读的验证结果。",
+    "Examples:": "示例：",
+    "Docs:": "文档："
+  }
+}

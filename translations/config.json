@@ -11,8 +11,20 @@
       "cli/tagline.json",
       "cli/help.json",
       "cli/commands.json",
+      "cli/core-command-descriptors.json",
+      "cli/subcli-descriptors.json",
       "cli/models-cli.json",
-      "cli/command-registry.json"
+      "cli/command-registry.json",
+      "cli/register-backup.json",
+      "cli/register-configure.json",
+      "cli/register-maintenance.json",
+      "cli/register-message.json",
+      "cli/completion-cli.json",
+      "cli/mcp-cli.json",
+      "cli/system-cli.json",
+      "cli/devices-cli.json",
+      "cli/config-cli.json",
+      "cli/secrets-cli.json"
     ],
     "wizard": [
       "wizard/onboarding.json",

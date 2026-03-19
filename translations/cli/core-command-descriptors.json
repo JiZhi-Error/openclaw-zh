@@ -1,6 +1,6 @@
 {
-  "file": "src/cli/program/command-registry.ts",
-  "description": "CLI 命令注册表 - 顶层命令描述",
+  "file": "src/cli/program/core-command-descriptors.ts",
+  "description": "CLI 核心命令描述符",
   "replacements": {
     "description: \"Initialize local config and agent workspace\"": "description: \"初始化本地配置和代理工作区\"",
     "description: \"Interactive onboarding for gateway, workspace, and skills\"": "description: \"网关、工作区和技能的交互式引导流程\"",
@@ -13,7 +13,6 @@
     "description: \"Uninstall the gateway service + local data (CLI remains)\"": "description: \"卸载网关服务和本地数据（保留 CLI）\"",
     "description: \"Send, read, and manage messages\"": "description: \"发送、读取和管理消息\"",
     "description: \"Search and reindex memory files\"": "description: \"搜索和重建记忆文件索引\"",
-    "description: \"Manage embedded Pi MCP servers\"": "description: \"管理内置 Pi MCP 服务器\"",
     "description: \"Run one agent turn via the Gateway\"": "description: \"通过网关运行一次代理\"",
     "description: \"Manage isolated agents (workspaces, auth, routing)\"": "description: \"管理隔离的代理（工作区、认证、路由）\"",
     "description: \"Show channel health and recent session recipients\"": "description: \"显示渠道健康状态和最近会话接收者\"",

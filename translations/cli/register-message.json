@@ -1,0 +1,13 @@
+{
+  "file": "src/cli/program/register.message.ts",
+  "description": "消息命令帮助",
+  "replacements": {
+    "Send, read, and manage messages and channel actions": "发送、读取并管理消息及渠道操作",
+    "Send a text message.": "发送文本消息。",
+    "Send a message with media.": "发送带媒体的消息。",
+    "Create a Discord poll.": "创建 Discord 投票。",
+    "React to a message.": "对消息做出反应。",
+    "Examples:": "示例：",
+    "Docs:": "文档："
+  }
+}

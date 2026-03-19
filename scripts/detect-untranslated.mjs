@@ -214,6 +214,127 @@ async function checkTranslation(translation, upstreamDir) {
   return result;
 }
 
+/** 规范化并过滤候选用户面向字符串 */
+function normalizeUserFacingString(raw) {
+  const text = raw
+    .replace(/\$\{[^}]+\}/g, "<...>")
+    .replace(/\\n/g, " ")
+    .replace(/\\t/g, " ")
+    .replace(/\\(["'`\\])/g, "$1")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  if (text.length < 4 || text.length > 220) return null;
+  if (!/[A-Za-z]/.test(text)) return null;
+  if (/[\u4e00-\u9fff]/.test(text)) return null;
+  if (/^(?:https?:\/\/|docs\.openclaw\.ai|\/cli\/|\.\/|\.\.\/|wss?:\/\/|~\/)/.test(text)) return null;
+  if (/^openclaw\b/i.test(text)) return null;
+  if (/^(?:source\s|#compdef\b|COMPREPLY\b|Register-ArgumentCompleter\b|_arguments\b|compdef\b)/.test(text)) return null;
+  if (/(?:join\(|map\(|=>|Where-Object|\$command|\$state|case \$|_root_completion|\$\(|\bcompgen\b)/.test(text)) return null;
+  if (/^(?:[a-z0-9_.-]+\/?)+$/i.test(text) && !text.includes(" ")) return null;
+  if (/^(?:[A-Z_][A-Z0-9_]*|[a-z0-9_-]+)$/.test(text) && !/[.:!?]/.test(text)) return null;
+  if (/^(?:--?[A-Za-z0-9][A-Za-z0-9-]*|<[^>]+>|\[[^\]]+\])(?:\s+(?:--?[A-Za-z0-9][A-Za-z0-9-]*|<[^>]+>|\[[^\]]+\]))*$/.test(text)) {
+    return null;
+  }
+  if (/^(?:help \[command\]|verify <archive>|[a-z-]+ <[^>]+>)$/i.test(text)) return null;
+
+  const codeLikeChars = (text.match(/[{}$\\|=_]/g) || []).length;
+  if (codeLikeChars / text.length > 0.08 && !/[.!?。]$/.test(text)) {
+    return null;
+  }
+
+  const words = text.split(/\s+/).filter(Boolean);
+  if (words.length === 1) {
+    if (!/^[A-Z][A-Za-z]+:?$/.test(text) || text.length < 5) {
+      return null;
+    }
+  }
+
+  return text;
+}
+
+/** 提取文件中的候选用户面向字符串（带行号） */
+function extractUserFacingCandidates(content) {
+  const candidates = [];
+  const regex = /(["'`])((?:\\.|(?!\1)[\s\S])*?)\1/g;
+  let match;
+  let line = 1;
+  let cursor = 0;
+
+  while ((match = regex.exec(content)) !== null) {
+    const between = content.slice(cursor, match.index);
+    const newlines = between.match(/\n/g);
+    if (newlines) line += newlines.length;
+    cursor = match.index;
+
+    const normalized = normalizeUserFacingString(match[2] || "");
+    if (!normalized) continue;
+
+    candidates.push({
+      text: normalized,
+      line,
+    });
+  }
+
+  const seen = new Set();
+  return candidates.filter((candidate) => {
+    if (seen.has(candidate.text)) return false;
+    seen.add(candidate.text);
+    return true;
+  });
+}
+
+/** 从翻译替换表构建已覆盖字符串集合 */
+function buildCoveredStringSet(translation) {
+  const covered = new Set();
+  for (const [original, translated] of Object.entries(translation.replacements || {})) {
+    if (original.startsWith("__comment")) continue;
+    covered.add(original);
+    covered.add(translated);
+    for (const candidate of extractUserFacingCandidates(original)) {
+      covered.add(candidate.text);
+    }
+    for (const candidate of extractUserFacingCandidates(translated)) {
+      covered.add(candidate.text);
+    }
+  }
+  return covered;
+}
+
+/** 扫描已覆盖文件中仍然存在的候选漏翻 */
+async function scanCoveredFileGaps(upstreamDir, translations) {
+  const gaps = [];
+
+  for (const translation of translations) {
+    const targetPath = path.join(upstreamDir, translation.file);
+    let content;
+    try {
+      content = await fs.readFile(targetPath, "utf-8");
+    } catch {
+      continue;
+    }
+
+    const covered = buildCoveredStringSet(translation);
+    const candidates = extractUserFacingCandidates(content).filter(
+      (candidate) => !covered.has(candidate.text),
+    );
+
+    if (candidates.length > 0) {
+      gaps.push({
+        configFile: translation.configFile,
+        targetFile: translation.file,
+        category: translation.category,
+        description: translation.description,
+        gapCount: candidates.length,
+        candidates,
+      });
+    }
+  }
+
+  gaps.sort((a, b) => b.gapCount - a.gapCount);
+  return gaps;
+}
+
 /** 扫描上游目录中没有翻译覆盖的新文件 */
 async function scanUncoveredFiles(upstreamDir, translations, moduleFilter = null) {
   // 收集所有已覆盖的文件路径
@@ -360,9 +481,9 @@ function cloneUpstream(targetDir) {
 
 // ─── 报告输出 ──────────────────────────────────────
 
-function printReport(results, uncoveredFiles, opts) {
+function printReport(results, uncoveredFiles, coveredFileGaps, opts) {
   if (opts.json) {
-    printJsonReport(results, uncoveredFiles);
+    printJsonReport(results, uncoveredFiles, coveredFileGaps);
     return;
   }
 
@@ -407,6 +528,24 @@ function printReport(results, uncoveredFiles, opts) {
     console.log();
   }
 
+  // ── 已覆盖文件中的候选漏翻 ──
+  if (coveredFileGaps.length > 0) {
+    console.log(`${c.bold}${c.cyan}--- 已覆盖文件中的候选漏翻 ---${c.reset}\n`);
+    for (const gap of coveredFileGaps) {
+      console.log(`  ${c.cyan}●${c.reset} ${c.bold}${gap.configFile}${c.reset} → ${gap.targetFile}`);
+      console.log(`    ${c.dim}${gap.description}${c.reset}`);
+      console.log(`    ${c.dim}候选漏翻 ${gap.gapCount} 条${c.reset}`);
+      const preview = opts.verbose ? gap.candidates.slice(0, 10) : gap.candidates.slice(0, 5);
+      for (const candidate of preview) {
+        console.log(`    ${c.dim}L${candidate.line}: ${candidate.text}${c.reset}`);
+      }
+      if (gap.candidates.length > preview.length) {
+        console.log(`    ${c.dim}...还有 ${gap.candidates.length - preview.length} 条${c.reset}`);
+      }
+      console.log();
+    }
+  }
+
   // ── 正常的翻译文件 ──
   const okResults = results.filter(r => r.stale === 0);
   if (opts.verbose && okResults.length > 0) {
@@ -429,17 +568,20 @@ function printReport(results, uncoveredFiles, opts) {
   const totalMatched = results.reduce((s, r) => s + r.matched, 0);
   const totalStale = results.reduce((s, r) => s + r.stale, 0);
   const totalAlreadyDone = results.reduce((s, r) => s + r.alreadyDone, 0);
+  const totalGapStrings = coveredFileGaps.reduce((sum, gap) => sum + gap.gapCount, 0);
 
   console.log(`  翻译文件总数:     ${totalFiles}`);
   console.log(`  ${c.green}正常匹配:${c.reset}         ${okCount}`);
   console.log(`  ${c.yellow}有失效条目:${c.reset}       ${staleCount}`);
   console.log(`  ${c.red}目标文件缺失:${c.reset}     ${missingCount}`);
   console.log(`  ${c.magenta}新增未覆盖文件:${c.reset}   ${uncoveredFiles.length}`);
+  console.log(`  ${c.cyan}已覆盖文件漏翻:${c.reset}   ${coveredFileGaps.length}`);
   console.log();
   console.log(`  翻译条目总数:     ${totalEntries}`);
   console.log(`  ${c.green}可匹配:${c.reset}           ${totalMatched}`);
   console.log(`  已翻译:           ${totalAlreadyDone}`);
   console.log(`  ${c.yellow}已失效:${c.reset}           ${totalStale}`);
+  console.log(`  ${c.cyan}候选漏翻字符串:${c.reset} ${totalGapStrings}`);
 
   if (uncoveredFiles.length > 0) {
     const estimatedNew = uncoveredFiles.reduce((s, f) => s + f.estimatedStrings, 0);
@@ -449,8 +591,8 @@ function printReport(results, uncoveredFiles, opts) {
   console.log(`\n${'═'.repeat(60)}`);
 
   // ── 结论 ──
-  if (totalStale === 0 && uncoveredFiles.length === 0) {
-    console.log(`${c.green}✓ 所有翻译条目正常，无新增未覆盖文件。${c.reset}`);
+  if (totalStale === 0 && uncoveredFiles.length === 0 && coveredFileGaps.length === 0) {
+    console.log(`${c.green}✓ 所有翻译条目正常，无新增未覆盖文件，也没有候选漏翻。${c.reset}`);
   } else {
     if (totalStale > 0) {
       console.log(`${c.yellow}⚠ 有 ${totalStale} 条翻译已失效，需要更新。${c.reset}`);
@@ -458,12 +600,15 @@ function printReport(results, uncoveredFiles, opts) {
     if (uncoveredFiles.length > 0) {
       console.log(`${c.magenta}● 发现 ${uncoveredFiles.length} 个新文件可能需要翻译。${c.reset}`);
     }
+    if (coveredFileGaps.length > 0) {
+      console.log(`${c.cyan}● 有 ${coveredFileGaps.length} 个已覆盖文件仍存在候选漏翻。${c.reset}`);
+    }
   }
 
   console.log();
 }
 
-function printJsonReport(results, uncoveredFiles) {
+function printJsonReport(results, uncoveredFiles, coveredFileGaps) {
   const report = {
     timestamp: new Date().toISOString(),
     summary: {
@@ -477,6 +622,8 @@ function printJsonReport(results, uncoveredFiles) {
       staleEntries: results.reduce((s, r) => s + r.stale, 0),
       alreadyTranslated: results.reduce((s, r) => s + r.alreadyDone, 0),
       estimatedNewStrings: uncoveredFiles.reduce((s, f) => s + f.estimatedStrings, 0),
+      coveredFilesWithGaps: coveredFileGaps.length,
+      candidateGapStrings: coveredFileGaps.reduce((s, gap) => s + gap.gapCount, 0),
     },
     staleTranslations: results
       .filter(r => r.stale > 0)
@@ -493,6 +640,13 @@ function printJsonReport(results, uncoveredFiles) {
       path: f.path,
       lines: f.lines,
       estimatedStrings: f.estimatedStrings,
+    })),
+    coveredFileGaps: coveredFileGaps.map((gap) => ({
+      configFile: gap.configFile,
+      targetFile: gap.targetFile,
+      category: gap.category,
+      gapCount: gap.gapCount,
+      candidates: gap.candidates,
     })),
   };
 
@@ -564,11 +718,20 @@ async function main() {
 
   const uncoveredFiles = await scanUncoveredFiles(upstreamDir, translations, opts.module);
 
+  if (!opts.json) {
+    console.log(`${c.cyan}ℹ${c.reset} 正在扫描已覆盖文件中的候选漏翻...`);
+  }
+
+  const coveredFileGaps = await scanCoveredFileGaps(upstreamDir, translations);
+
   // 输出报告
-  printReport(results, uncoveredFiles, opts);
+  printReport(results, uncoveredFiles, coveredFileGaps, opts);
 
   // 退出码：有问题返回 1，一切正常返回 0
-  const hasIssues = results.some(r => r.stale > 0) || uncoveredFiles.length > 0;
+  const hasIssues =
+    results.some(r => r.stale > 0) ||
+    uncoveredFiles.length > 0 ||
+    coveredFileGaps.length > 0;
   process.exit(hasIssues ? 1 : 0);
 }
 

@@ -1,0 +1,15 @@
+{
+  "file": "src/cli/config-cli.ts",
+  "description": "配置 CLI 命令帮助",
+  "replacements": {
+    "Non-interactive config helpers (get/set/unset/file/validate). Run without subcommand for guided setup.": "非交互式配置工具（get/set/unset/file/validate）。不带子命令时进入引导式设置。",
+    "Docs:": "文档：",
+    "Configuration sections for guided setup (repeatable). Use with no subcommand.": "用于引导式设置的配置分区（可重复）。与无子命令模式一起使用。",
+    "Get a config value by dot path": "按点路径获取配置值",
+    "Config path (dot or bracket notation)": "配置路径（点号或方括号写法）",
+    "Remove a config value by dot path": "按点路径移除配置值",
+    "Print the active config file path": "输出当前活动配置文件路径",
+    "Validate the current config against the schema without starting the gateway": "不启动网关，直接根据模式校验当前配置",
+    "Output validation result as JSON": "以 JSON 输出校验结果"
+  }
+}

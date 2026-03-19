@@ -10,9 +10,15 @@
     "Gateway control via WebSocket.": "通过 WebSocket 控制网关。",
     "Talk directly to the agent using the Gateway; optionally send the WhatsApp reply.": "通过网关直接与 AI 助手对话；可选发送 WhatsApp 回复。",
     "Send via your Telegram bot.": "通过你的 Telegram 机器人发送。",
+    ".version(ctx.programVersion)": ".version(ctx.programVersion, \"-V, --version\", \"输出版本号\")",
     "Dev profile: isolate state under ~/.openclaw-dev, default gateway port 19001, and shift derived ports (browser/canvas)": "开发配置：在 ~/.openclaw-dev 下隔离状态，默认网关端口 19001，并移动派生端口（浏览器/画布）",
     "Use a named profile (isolates OPENCLAW_STATE_DIR/OPENCLAW_CONFIG_PATH under ~/.openclaw-<name>)": "使用命名配置文件（在 ~/.openclaw-<name> 下隔离状态和配置）",
     "Disable ANSI colors": "禁用 ANSI 颜色",
+    "Display help for command": "显示命令帮助",
+    "Hint: commands suffixed with * have subcommands. Run <command> --help for details.": "提示：带 * 的命令包含子命令。运行 <command> --help 查看详情。",
+    ".replace(/^Usage:/gm, theme.heading(\"Usage:\"))": ".replace(/^Usage:/gm, theme.heading(\"用法：\"))",
+    ".replace(/^Options:/gm, theme.heading(\"Options:\"))": ".replace(/^Options:/gm, theme.heading(\"选项：\"))",
+    ".replace(/^Commands:/gm, theme.heading(\"Commands:\"))": ".replace(/^Commands:/gm, theme.heading(\"命令：\"))",
     "`Global log level override for file + console (${CLI_LOG_LEVEL_VALUES})`": "`全局日志级别覆盖，适用于文件和控制台 (${CLI_LOG_LEVEL_VALUES})`",
     "return `\\n${theme.heading(\"Examples:\")}\\n${fmtExamples}\\n\\n${theme.muted(\"Docs:\")} ${docs}\\n`;": "return `\\n${theme.heading(\"示例：\")}\\n${fmtExamples}\\n\\n${theme.muted(\"文档：\")} ${docs}\\n`;"
   }
