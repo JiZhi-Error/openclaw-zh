@@ -81,6 +81,14 @@ jobs:
             exit 1
           fi
 
+      - name: Rewrite GitHub git URLs to HTTPS
+        shell: bash
+        run: |
+          # 上游锁文件里有公开仓库的 git@github.com 依赖，CI 无 SSH key 时需要改走 HTTPS。
+          git config --global --add url."https://github.com/".insteadOf git@github.com:
+          git config --global --add url."https://github.com/".insteadOf ssh://git@github.com/
+          git config --global --add url."https://github.com/".insteadOf https://git@github.com/
+
       - name: Install upstream dependencies
         working-directory: openclaw
         shell: bash
