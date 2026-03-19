@@ -1,0 +1,8 @@
+{
+  "file": "extensions/qianfan/openclaw.plugin.json",
+  "description": "Qianfan provider 认证选项",
+  "replacements": {
+    "Qianfan API key": "Qianfan API 密钥",
+    "QIANFAN API key": "QIANFAN API 密钥"
+  }
+}

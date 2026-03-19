@@ -1,0 +1,8 @@
+{
+  "file": "extensions/cloudflare-ai-gateway/openclaw.plugin.json",
+  "description": "Cloudflare AI Gateway provider 认证选项",
+  "replacements": {
+    "Cloudflare AI Gateway API key": "Cloudflare AI Gateway API 密钥",
+    "Cloudflare AI Gateway": "Cloudflare AI Gateway"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "file": "extensions/xai/openclaw.plugin.json",
+  "description": "xAI provider 认证选项",
+  "replacements": {
+    "xAI API key": "xAI API 密钥"
+  }
+}

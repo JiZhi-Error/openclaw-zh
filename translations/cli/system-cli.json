@@ -12,6 +12,8 @@
     "Show the last heartbeat event": "显示最近一次心跳事件",
     "Enable heartbeats": "启用心跳",
     "Disable heartbeats": "禁用心跳",
-    "List system presence entries": "列出系统在线状态项"
+    "List system presence entries": "列出系统在线状态项",
+    "--mode must be now or next-heartbeat": "--mode 必须是 now 或 next-heartbeat",
+    "--text is required": "--text 为必填项"
   }
 }

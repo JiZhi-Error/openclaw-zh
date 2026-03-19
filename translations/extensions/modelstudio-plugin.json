@@ -1,0 +1,10 @@
+{
+  "file": "extensions/modelstudio/openclaw.plugin.json",
+  "description": "Model Studio provider 认证选项",
+  "replacements": {
+    "Coding Plan API Key for China (subscription)": "中国区 Coding Plan API 密钥（订阅版）",
+    "Alibaba Cloud Model Studio Coding Plan API key (China)": "阿里云 Model Studio Coding Plan API 密钥（中国区）",
+    "Coding Plan API Key for Global/Intl (subscription)": "国际版 Coding Plan API 密钥（订阅版）",
+    "Alibaba Cloud Model Studio Coding Plan API key (Global/Intl)": "阿里云 Model Studio Coding Plan API 密钥（国际版）"
+  }
+}

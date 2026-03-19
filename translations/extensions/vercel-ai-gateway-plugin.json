@@ -1,0 +1,7 @@
+{
+  "file": "extensions/vercel-ai-gateway/openclaw.plugin.json",
+  "description": "Vercel AI Gateway provider 认证选项",
+  "replacements": {
+    "Vercel AI Gateway API key": "Vercel AI Gateway API 密钥"
+  }
+}

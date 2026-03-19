@@ -1,0 +1,9 @@
+{
+  "file": "extensions/moonshot/openclaw.plugin.json",
+  "description": "Moonshot provider 认证选项",
+  "replacements": {
+    "Moonshot API key (.ai)": "Moonshot API 密钥（.ai）",
+    "Moonshot API key (.cn)": "Moonshot API 密钥（.cn）",
+    "Moonshot API key": "Moonshot API 密钥"
+  }
+}

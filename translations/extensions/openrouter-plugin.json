@@ -1,0 +1,7 @@
+{
+  "file": "extensions/openrouter/openclaw.plugin.json",
+  "description": "OpenRouter provider 认证选项",
+  "replacements": {
+    "OpenRouter API key": "OpenRouter API 密钥"
+  }
+}

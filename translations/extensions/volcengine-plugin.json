@@ -1,0 +1,7 @@
+{
+  "file": "extensions/volcengine/openclaw.plugin.json",
+  "description": "Volcengine provider 认证选项",
+  "replacements": {
+    "Volcano Engine API key": "火山引擎 API 密钥"
+  }
+}

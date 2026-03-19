@@ -1,0 +1,7 @@
+{
+  "file": "extensions/xiaomi/openclaw.plugin.json",
+  "description": "Xiaomi provider 认证选项",
+  "replacements": {
+    "Xiaomi API key": "Xiaomi API 密钥"
+  }
+}

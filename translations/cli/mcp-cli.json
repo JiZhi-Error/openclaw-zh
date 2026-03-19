@@ -9,6 +9,12 @@
     "MCP server name": "MCP 服务器名称",
     "Set one configured MCP server from a JSON object": "使用 JSON 对象设置一个已配置的 MCP 服务器",
     "JSON object, for example {\"command\":\"uvx\",\"args\":[\"context7-mcp\"]}": "JSON 对象，例如 {\"command\":\"uvx\",\"args\":[\"context7-mcp\"]}",
-    "Remove one configured MCP server": "删除一个已配置的 MCP 服务器"
+    "Remove one configured MCP server": "删除一个已配置的 MCP 服务器",
+    "No MCP servers configured in ${loaded.path}.": "${loaded.path} 中未配置 MCP 服务器。",
+    "MCP servers (${loaded.path}):": "MCP 服务器（${loaded.path}）：",
+    "No MCP server named \"${name}\" in ${loaded.path}.": "${loaded.path} 中没有名为“${name}”的 MCP 服务器。",
+    "MCP server \"${name}\" (${loaded.path}):": "MCP 服务器“${name}”（${loaded.path}）：",
+    "Saved MCP server \"${name}\" to ${result.path}.": "已将 MCP 服务器“${name}”保存到 ${result.path}。",
+    "Removed MCP server \"${name}\" from ${result.path}.": "已从 ${result.path} 移除 MCP 服务器“${name}”。"
   }
 }

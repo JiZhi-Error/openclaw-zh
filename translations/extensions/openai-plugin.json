@@ -1,0 +1,8 @@
+{
+  "file": "extensions/openai/openclaw.plugin.json",
+  "description": "OpenAI provider 认证选项",
+  "replacements": {
+    "OpenAI Codex (ChatGPT OAuth)": "OpenAI Codex（ChatGPT OAuth）",
+    "OpenAI API key": "OpenAI API 密钥"
+  }
+}

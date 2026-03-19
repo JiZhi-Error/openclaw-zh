@@ -1,0 +1,7 @@
+{
+  "file": "extensions/kimi-coding/openclaw.plugin.json",
+  "description": "Kimi Coding provider 认证选项",
+  "replacements": {
+    "Kimi Code API key": "Kimi Code API 密钥"
+  }
+}

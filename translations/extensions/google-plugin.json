@@ -1,0 +1,10 @@
+{
+  "file": "extensions/google/openclaw.plugin.json",
+  "description": "Google provider 认证选项",
+  "replacements": {
+    "Google Gemini API key": "Google Gemini API 密钥",
+    "Gemini API key": "Gemini API 密钥",
+    "Gemini CLI OAuth": "Gemini CLI OAuth",
+    "Gemini API key + OAuth": "Gemini API 密钥 + OAuth"
+  }
+}

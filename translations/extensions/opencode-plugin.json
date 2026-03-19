@@ -1,0 +1,8 @@
+{
+  "file": "extensions/opencode/openclaw.plugin.json",
+  "description": "OpenCode Zen provider 认证选项",
+  "replacements": {
+    "OpenCode Zen catalog": "OpenCode Zen 目录",
+    "OpenCode API key (Zen catalog)": "OpenCode API 密钥（Zen 目录）"
+  }
+}

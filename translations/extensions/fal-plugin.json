@@ -1,0 +1,7 @@
+{
+  "file": "extensions/fal/openclaw.plugin.json",
+  "description": "fal provider 认证选项",
+  "replacements": {
+    "fal API key": "fal API 密钥"
+  }
+}

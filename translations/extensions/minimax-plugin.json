@@ -1,0 +1,11 @@
+{
+  "file": "extensions/minimax/openclaw.plugin.json",
+  "description": "MiniMax provider 认证选项",
+  "replacements": {
+    "MiniMax OAuth (Global)": "MiniMax OAuth（全球）",
+    "MiniMax API key (Global)": "MiniMax API 密钥（全球）",
+    "MiniMax OAuth (CN)": "MiniMax OAuth（中国）",
+    "MiniMax API key (CN)": "MiniMax API 密钥（中国）",
+    "MiniMax API key": "MiniMax API 密钥"
+  }
+}

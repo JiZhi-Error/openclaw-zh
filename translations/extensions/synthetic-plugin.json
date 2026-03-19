@@ -1,0 +1,7 @@
+{
+  "file": "extensions/synthetic/openclaw.plugin.json",
+  "description": "Synthetic provider 认证选项",
+  "replacements": {
+    "Synthetic API key": "Synthetic API 密钥"
+  }
+}

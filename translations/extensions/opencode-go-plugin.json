@@ -1,0 +1,8 @@
+{
+  "file": "extensions/opencode-go/openclaw.plugin.json",
+  "description": "OpenCode Go provider 认证选项",
+  "replacements": {
+    "OpenCode Go catalog": "OpenCode Go 目录",
+    "OpenCode API key (Go catalog)": "OpenCode API 密钥（Go 目录）"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "file": "extensions/together/openclaw.plugin.json",
+  "description": "Together provider 认证选项",
+  "replacements": {
+    "Together AI API key": "Together AI API 密钥"
+  }
+}

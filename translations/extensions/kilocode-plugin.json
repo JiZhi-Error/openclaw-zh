@@ -1,0 +1,7 @@
+{
+  "file": "extensions/kilocode/openclaw.plugin.json",
+  "description": "Kilo provider 认证选项",
+  "replacements": {
+    "Kilo Gateway API key": "Kilo Gateway API 密钥"
+  }
+}

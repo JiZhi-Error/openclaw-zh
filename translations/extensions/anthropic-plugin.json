@@ -1,0 +1,8 @@
+{
+  "file": "extensions/anthropic/openclaw.plugin.json",
+  "description": "Anthropic provider 认证选项",
+  "replacements": {
+    "Anthropic API key": "Anthropic API 密钥",
+    "Anthropic token (paste setup-token)": "Anthropic 令牌（粘贴 setup-token）"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "file": "extensions/venice/openclaw.plugin.json",
+  "description": "Venice provider 认证选项",
+  "replacements": {
+    "Venice AI API key": "Venice AI API 密钥",
+    "Venice API key": "Venice API 密钥"
+  }
+}

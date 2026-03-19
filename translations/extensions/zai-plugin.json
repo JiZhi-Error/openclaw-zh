@@ -1,0 +1,11 @@
+{
+  "file": "extensions/zai/openclaw.plugin.json",
+  "description": "Z.AI provider 认证选项",
+  "replacements": {
+    "Z.AI API key": "Z.AI API 密钥",
+    "Coding-Plan-Global": "Coding-Plan-Global",
+    "Coding-Plan-CN": "Coding-Plan-CN",
+    "Global": "Global",
+    "CN": "CN"
+  }
+}

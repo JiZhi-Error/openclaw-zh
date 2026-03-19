@@ -1,0 +1,7 @@
+{
+  "file": "extensions/byteplus/openclaw.plugin.json",
+  "description": "BytePlus provider 认证选项",
+  "replacements": {
+    "BytePlus API key": "BytePlus API 密钥"
+  }
+}

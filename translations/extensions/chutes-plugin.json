@@ -1,0 +1,8 @@
+{
+  "file": "extensions/chutes/openclaw.plugin.json",
+  "description": "Chutes provider 认证选项",
+  "replacements": {
+    "Chutes API key": "Chutes API 密钥",
+    "Chutes (OAuth)": "Chutes（OAuth）"
+  }
+}

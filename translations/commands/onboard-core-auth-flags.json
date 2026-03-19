@@ -1,0 +1,7 @@
+{
+  "file": "src/commands/onboard-core-auth-flags.ts",
+  "description": "Onboard 核心认证选项",
+  "replacements": {
+    "LiteLLM API key": "LiteLLM API 密钥"
+  }
+}

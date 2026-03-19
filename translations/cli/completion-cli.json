@@ -7,6 +7,16 @@
     "Shell to generate completion for (default: zsh)": "要生成补全的 Shell（默认：zsh）",
     "Install completion script to shell profile": "将补全脚本安装到 Shell 配置文件",
     "Write completion scripts to $OPENCLAW_STATE_DIR/completions (no stdout)": "将补全脚本写入 $OPENCLAW_STATE_DIR/completions（不输出到 stdout）",
-    "Skip confirmation (non-interactive)": "跳过确认（非交互）"
+    "Skip confirmation (non-interactive)": "跳过确认（非交互）",
+    "Unsupported shell: ${shell}": "不支持的 Shell：${shell}",
+    "\"Updating\"": "\"更新\"",
+    "\"Installing\"": "\"安装\"",
+    "Automated installation not supported for ${shell} yet.": "暂不支持为 ${shell} 自动安装补全。",
+    "Completion cache not found at ${cachePath}. Run \\`${binName} completion --write-state\\` first.": "未在 ${cachePath} 找到补全缓存。请先运行 \\`${binName} completion --write-state\\`。",
+    "Profile not found at ${profilePath}. Created a new one.": "未找到配置文件 ${profilePath}。已创建新文件。",
+    "Completion already installed in ${profilePath}": "补全已安装到 ${profilePath}",
+    "${action} completion in ${profilePath}...": "${action} ${profilePath} 中的补全……",
+    "Completion installed. Restart your shell or run: source ${profilePath}": "补全已安装。请重启 Shell，或运行：source ${profilePath}",
+    "Failed to install completion: ${err as string}": "安装补全失败：${err as string}"
   }
 }

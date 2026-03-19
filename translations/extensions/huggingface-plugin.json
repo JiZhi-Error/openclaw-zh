@@ -1,0 +1,8 @@
+{
+  "file": "extensions/huggingface/openclaw.plugin.json",
+  "description": "Hugging Face provider 认证选项",
+  "replacements": {
+    "Hugging Face API key": "Hugging Face API 密钥",
+    "Hugging Face API key (HF token)": "Hugging Face API 密钥（HF 令牌）"
+  }
+}

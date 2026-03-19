@@ -1,0 +1,7 @@
+{
+  "file": "extensions/mistral/openclaw.plugin.json",
+  "description": "Mistral provider 认证选项",
+  "replacements": {
+    "Mistral API key": "Mistral API 密钥"
+  }
+}
