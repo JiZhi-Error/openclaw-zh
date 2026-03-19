@@ -13,6 +13,21 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT_DIR = path.resolve(__dirname, '../..');
 const TRANSLATIONS_DIR = path.join(ROOT_DIR, 'translations');
 
+function escapeRegExp(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function isIdentifierChar(char) {
+  return /[A-Za-z0-9_$]/.test(char);
+}
+
+function createReplacementRegex(original) {
+  const escaped = escapeRegExp(original);
+  const leftBoundary = isIdentifierChar(original[0]) ? '(?<![A-Za-z0-9_$])' : '';
+  const rightBoundary = isIdentifierChar(original[original.length - 1]) ? '(?![A-Za-z0-9_$])' : '';
+  return new RegExp(`${leftBoundary}${escaped}${rightBoundary}`, 'g');
+}
+
 /**
  * 加载主配置文件
  */
@@ -84,18 +99,20 @@ export async function applyTranslation(translation, targetDir, options = {}) {
     .sort((a, b) => b[0].length - a[0].length);
 
   for (const [original, translated] of orderedReplacements) {
+    const replacementRegex = createReplacementRegex(original);
 
-    if (modified.includes(translated)) {
-      // 已经翻译过了
-      stats.skipped++;
-      if (verbose) log.dim(`已存在: ${original.slice(0, 50)}...`);
-    } else if (modified.includes(original)) {
-      // 应用翻译 - 全局替换所有匹配项
-      modified = modified.replaceAll(original, translated);
+    if (replacementRegex.test(modified)) {
+      // 应用翻译 - 全局替换所有匹配项，并避免误伤标识符内部文本
+      replacementRegex.lastIndex = 0;
+      modified = modified.replace(replacementRegex, translated);
       stats.applied++;
       if (verbose) {
         log.dim(`替换: ${original.slice(0, 35)}... → ${translated.slice(0, 35)}...`);
       }
+    } else if (modified.includes(translated)) {
+      // 已经翻译过了
+      stats.skipped++;
+      if (verbose) log.dim(`已存在: ${original.slice(0, 50)}...`);
     } else {
       // 找不到原文
       stats.notFound++;
